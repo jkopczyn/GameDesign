@@ -1,0 +1,88 @@
+like Risk:Legacy but played for horror
+
+names: 'Sunnydale', 'Little Town of Horrors', 'State of Decay', 'Just The End Of
+The World Again'
+
+start with a couple dozen characters (kickstarter reward: be one of them. easy.)
+they have one use powers, but seriously one use. rip them off the sheet when
+used (and if you rip off other things by mistake? Tough.)
+Different characters are different amounts of good. This is fine. The strong
+will get worn down soon enough.
+
+Faith meter: starts at different places for different characters, but every time
+an active character sees a character die, or is around for losing the game, a
+mark of faith gets permanently crossed out.
+Faith does? protect against horror-check things, maybe a roll against faith to
+determine whether the player takes a new character and helps out, or Joins The
+Winning Team and plays against the other players (scenario-dependent?)
+
+Scenarios: main card for each scenario has basic rules and references to other
+things that should be opened and used given certain conditions. On the back is
+art depicting the scenario in some way; the winners of the scenario get to keep
+it -> if you betray after a low faith death, you have something to play for
+-> lends itself to a 'you all win, but he wins the MOST' thing. sounds good, I
+think.
+
+buildings/rooms have useful functions, might get broken in the course of play.
+can't be fixed in game time; if you lose, some won't get fixed at all. Also
+probably mark how many times they've been damaged, and if it's too many, they
+might stay broken even if you win
+
+  airport: get a plane which can do scouting, can only stay up X turns, takes Y
+  turns to land safely. If the airport is destroyed while someone is in the air,
+  open the rules packet for it >:-D
+    rules for the stranded plane: you can stay in the air until your fuel runs 
+    out, but you can't land, only crash. When you run out of fuel or if you take
+    a dive before that, you move up to one space and then crash into the square
+    below, dealing large damage, or massive damage depending on remaining fuel,
+    to everything there, and breaking the area. If the plane crashes, the
+    airport is long-term broken (probably make a roll to get a new plane,
+    irregularly).
+  radio station: move other people, make no one ever have to deal with isolation
+  penalties (which should be a thing); when damaged, there become more rules
+  about what info can be shared freely
+
+possible rule: some things will give you 'Quandaries' that let you hurt others
+on your team and/or spend shared scarce resources, for some benefit. While
+considering a Quandary, no one other than the person deciding may speak.
+
+basic structure of challenges: find plot coupons, process of finding them
+exposes you to dangerous things and you might find enemies instead of help.
+challenge determines some things that are more dangerous than usual or more
+necessary than usual.
+
+Predator alien: deals massive damage unless evaded, might show up anywhere
+
+Shoggoth: moves slowly but visibly, ridiculously healthy and hard to evade,
+  moves toward a goal location to make it harder to banish
+
+  Zombies: they're everywhere, must constantly fight them. everything else is
+  pretty easy, you just have to fight zombies all the damn time
+
+  Hallucinator: most things you need to gather, you make a roll at the end
+  of your turn and if you fail they count toward an enemy victory condition
+  instead of allies
+
+  Cthulhu: you need to gather information from several places to defeat it, but
+  gathering information degrades faith rapidly
+
+  Vampire: gathering resources weakens the vampires, but anyone who dies joins the
+  vampire's side (second and on players to die, if they make their faith roll,
+      hand their character to the vampire players and get a new one.)
+
+  Hellmouth: things are breaking quickly and plot coupons are scattered around the
+  town. The more things are broken beforehand, the less time there is to win
+  before time runs out. Characters can sacrifice themselves to dive into places and
+  retrieve the important things.
+
+  Aliens: ??? technology doesn't work ???
+
+  Body snatchers: mafia mode, but mafia are not known to other mafia. Players put
+  together de-snatchers, but they work one-on-one and if both were snatchers they
+  stay evil.
+
+  Sky Is Falling: go find some stuff, pure time limit but characters can panic.
+  Unlike most others, if you lose everyone in the game dies and is permanently
+  unusable.
+
+crib from Betrayal and Arkham to find more scenarios
