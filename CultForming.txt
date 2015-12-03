@@ -1,0 +1,9 @@
+acquire several types of workers
+each type of worker will do a specific task for you without being told
+  but you need variation, and changing what they will do takes exerting control
+  too much exerting control, or too little, loses followers
+    - maybe different followers leave first, depending on which end?
+
+need to acquire money, followers, *dedicated* followers, political influence,
+  popular opinion
+  maybe: weapons, land, drugs, poison (mass suicide victory condition?)
