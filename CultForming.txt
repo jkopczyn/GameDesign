@@ -5,5 +5,24 @@ each type of worker will do a specific task for you without being told
     - maybe different followers leave first, depending on which end?
 
 need to acquire money, followers, *dedicated* followers, political influence,
-  popular opinion
+  popular opinion, attack surrogates
   maybe: weapons, land, drugs, poison (mass suicide victory condition?)
+
+types of follower:
+(green) idealistic: good at getting more followers and making followers dedicated,
+default to getting more (idealistic) followers
+
+(red) angry: good at attacking the influence and opinion of others, and for stealing
+their followers (and making them angry)
+
+(yellow) celebrity: good at popular opinion and money, helpful for getting more celebrity
+followers
+
+(blue) wholesome: good at political influence and money; getting political power is
+virtually impossible without wholesome followers
+  can be created with any followers, but it takes time to get busy
+
+(black) inner circle: can help control your followers and create attack surrogates, but
+good at everything; can only be created from other followers, with difficulty
+
+
