@@ -13,16 +13,21 @@ types of follower:
 default to getting more (idealistic) followers
 
 (red) angry: good at attacking the influence and opinion of others, and for stealing
-their followers (and making them angry)
+their followers (and making them angry), default to attacking opinion
 
 (yellow) celebrity: good at popular opinion and money, helpful for getting more celebrity
-followers
+followers, default to money
 
 (blue) wholesome: good at political influence and money; getting political power is
-virtually impossible without wholesome followers
+virtually impossible without wholesome followers, default to popular opinion
   can be created with any followers, but it takes time to get busy
 
 (black) inner circle: can help control your followers and create attack surrogates, but
-good at everything; can only be created from other followers, with difficulty
+good at everything; can only be created from dedicated followers, do not need to
+be moved away from default
 
+anybody can: buy land with money, buy political influence with money and popular
+opinion, recruit followers badly, influence popular opinion weakly, contribute
+money weakly
 
+core mechanics: 
