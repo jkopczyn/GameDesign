@@ -1,0 +1,12 @@
+Game where there are several 'prayers' you can make, like Bastion; each helps you and hurts you in some way. Substantial interaction to make it riskier.
+
+in order for this to work it needs to have a fairly complex game to be attached to. With enough aspects that you can nerf some aspect without hamstringing yourself. Which means probably a wargame of at least Memoir '44 or Eclipse complexity.
+I don't think I really want to deal with that.
+
+Let's say it's roughly Eclipse. What kinds of prayers wold I do?
+
+Swarm: You can move another set of ships every time you move ships; if you have this once, 4 ships per activation, if twice 6, etc. (Base is 2). However, your ships take -1 to HP (affects the bigger ships by default, cuts off upgrade paths for smaller ships).
+
+Tank: Your ships all have a free +1 HP and +1 armor, but take -1 movement distance.
+
+Outriderss: Your ships all get +2 movement distance, but you may move one less ship per movement activation.

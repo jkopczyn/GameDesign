@@ -1,0 +1,31 @@
+This is a pretty vague idea. I think it wants more than four suits, and less than 13 cards per suit. Maybe 7 of 7 each? Or 5 of 10 each? 7 of 10?
+
+Circular trumping like RPS-Lizard-Spock; cards must follow suit up to a point, but there are ways to jump to trump before running out of cards of that suit.
+
+Possibility: You may only play cards that beat the current high card. Cards which beat the current high card are any higher card of the same suit or any card of one of the suits that trump it. If you have a card of the current suit, you must play that rather than trump.
+If you cannot play a winning card, you may ship a loser, but it is played differently (call "Loser" as you play it?)
+
+The game ends when all but one player plays a loser in succession, or when all players are out of cards. At that point, the high card is the winner.
+
+5 suits would guarantee that every card is either in this suit, trumps it, or is trumped by it, if there are two trump suits (which I think should be true). 7 could have two trump suits, two trumped suits, and two suits which are uninvolved, and would take longer to wrap around back to the starting suit; if I do 7 suits, there should definitely be 10 cards per suit so that there's time to wrap around a few times without many losers.
+
+Five suits: 
+Stars trump spades and hearts
+Spades trump hearts and diamonds
+Hearts trump diamonds and clubs
+Diamonds trump clubs and stars
+Clubs trump stars and spades
+
+Seven suits:
+Spades /Hearts /Diamonds /Clubs /Crosses /Stars  /Moons 
+Black  /Red    /Blue     /Green /Orange  /Yellow /Purple
+Spades trump hearts and diamonds
+Hearts trump diamonds and clubs
+Diamonds trump clubs and crosses
+Clubs trump crosses and moons
+Crosses trump moons and stars
+Moons trump stars and spades
+Stars trump spades and hearts
+
+I think 7 suits is a better place to start.
+

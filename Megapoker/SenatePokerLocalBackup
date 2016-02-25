@@ -1,0 +1,145 @@
+In the Senate of the Arcturan Confederation, poker isn’t a metaphor for politics; it’s the real thing. To pick the Prime Minister of Arcturus each decade, the Senators play a tournament of a game human visitors dubbed “Stairwell.” On each hand of cards, votes are staked and committed, with the stakes - and the deck - growing bigger each hand.
+When the visitors returned home, they brought with them a variant of the Senate’s great game, which is famed across humanspace as
+Arcturan Megapoker!
+
+Structure of the game: Played in seven hands. Each player starts with 20 votes in chips and acquires some more each hand, with more at stake with each successive hand. Additionally, the deck grows starting with a 21-card deck in three suits and ending with a 94-card deck in six suits.
+
+Stairwell is a hold’em-style game; each player gets personal cards dealt face-down, and community cards are dealt face-up. How many cards are dealt changes as the hands progress. The hand is always won by the best five-card hand that a player can assemble from among the community cards and their personal cards; a player must always use at least two of their personal cards for this hand.
+
+When winning a hand, a player does not collect their winnings in chips, but in paper money. All chips in the pot (their bid and all others) return to the bank and the hand winner is given an equal value in cash. However, they do receive some chips: At the beginning of the next round, when every player receives chips, they receive double. (ex. Aater bets 15 on the first hand, Birgo calls, and Charl folds; Aatre and Birgo put their chips into the pot. Birgo wins; 30 chips return to the bank, and Birgo receives $30. At the beginning of the second hand, Birgo receives 20 chips; Aater and Charl receive 10 each.)
+
+Hand 1:
+Players start with 20 chips
+The deck is 21 cards; 2-8 of spades, hearts, and diamonds
+Each player is dealt two personal cards and four community cards are dealt; a flop of three, then a turn of one more.
+
+Hand 2:
+Players each receive 10 additional chips
+The deck is 29 cards; 2-10 of spades, hearts, and diamonds, and two wild Jokers
+Each player is dealt two personal cards and four community cards are dealt; a flop of three, then a turn of one more.
+
+Hand 3:
+Players each receive 15 additional chips
+The deck is 38 cards; 2-10 of spades, hearts, diamonds, and clubs, and two wild Jokers
+Each player is dealt three personal cards, and five community cards are dealt; a flop of three, then a turn of two more.
+Hand 4:
+Players each receive 20 additional chips
+The deck is 54 cards; 2-A of spades, hearts, diamonds, and clubs, and two wild Jokers
+Each player is dealt three personal cards, and five community cards are dealt; a flop of three, then a turn of two more.
+
+Hand 5:
+Players each receive 25 additional chips
+The deck is 67 cards; 2-A of spades, hearts, diamonds, clubs, and stars, and two wild Jokers
+Each player is dealt four personal cards, and six community cards are dealt; a flop of three, then a turn of two more, and finally a river of one more.
+
+Hand 6:
+Players each receive 25 additional chips
+The deck is 79 cards; 2-10PJQKA of spades, hearts, diamonds, clubs, and stars, and four wild Jokers
+Each player is dealt four personal cards, and six community cards are dealt; a flop of three, then a turn of two more, and finally a river of one more.
+
+Hand 6:
+Players each receive 30 additional chips
+The deck is 94 cards; 2-10PJQKA of spades, hearts, diamonds, clubs, stars, and moons, and four wild Jokers
+Each player is dealt five personal cards, and seven community cards are dealt; a flop of three, then a turn of two more, and finally a river of two more.
+
+Game End: Players can sell chips for $1 per 5; the player with the most money in $ has won. In honor of the game’s origins in Arcturus, the winner often receives some other reward, such as being addressed exclusively as Your Excellency for a day, choosing the next game, or, when played in a bar, getting all their drinks paid for
+
+
+Hand Rankings
+
+2-8, three suits
+possible hands total: 21 choose 5= 20349
+
+1	Straight Flush: 9	(8,7,6)=3 *(suits)=3
+2	Flush: 63		(suits)=3 (numbers)=7 choose 5=
+3	Full House: 126	(3of)=7 *(overs)=6 *(overs suit)=3
+4	Straight: 720		(8,7,6)=3 *(suits)=3^5-3
+5	3of: 945		(number)=7 (kicker numbers)=6*5/2 (kicker suits)=3*3
+6	Two Pairs: 2835	(ranks)=7*6/2, (suits)=3*3, (kicker)=5*3
+7	Pair: 11340		(rank/suit)=7*3, (kickers)=(6*5*4/3*2)*(3^3)
+8	High Card: 4311	remainder
+
+2-10, three suits
+possible hands total: 27 choose 5= 80730
+
+0.5	5of
+1	Straight Flush: 15	(top)=5 *(suits)=3
+1.5	4of
+2	Full House: 216	(3of)=9 (overs)=8 (overs suit)=3
+3	Flush: 378		(suits)=3 (numbers)=9 choose 5=126
+4	Straight: 1200		(top)=5 *(suits)=3^5-3
+5	3of: 2268		(number)=9 (kicker numbers)=8*7/2 (kicker suits)=3*3
+6	Two Pairs: 6804 	(ranks)=9*8/2 (suits)=3*3 (kicker)=7*3
+7	Pair: 40824		(rank/suit)=9*3 (kickers)=8*7*6/(3*2)*3^3
+8	High Card: 29025	remainder
+
+2-10, four suits
+possible hands total: 36 choose 5= 376992
+
+0.5	5of
+1	Straight Flush: 20	(top)=5 *(suits)=4
+2	4of: 288		(number)=9 (kicker number)=8 (kicker suit)=4
+3	Flush: 504		(suits)=4 (numbers)=9 choose 5=126
+4	Full House: 1728	(3of)=9 (suits)=4 (overs)=8 (overs suit)=4*3/2
+5	3of: 16128		(number)=9 (suits)=4 (kicker numbers)=8*7/2 (kicker suits)=4*4
+6	Straight: 5100		(top)=5 *(suits)=4^5-4
+7	Two Pairs: 36288	(ranks)=9*8/2 (suits)=(4*3/2)^2 (kicker)=7*4
+8	Pair: 193536		(rank/suit)=9*4*3/2 (kickers)=8*7*6/(3*2)*4^3
+9	High Card: 123400	remainder
+
+2-A, four suits
+possible hands total: 52 choose 5= 2,598,960
+
+0.5	5of
+1	Straight Flush: 36	(top)=9 *(suits)=4
+2	4of: 624			(number)=13 (kicker number)=12 (kicker suit)=4
+3	Full House: 3744	(3of)=13 (suits)=4 (overs)=12 (overs suit)=4*3/2
+4	Flush: 5148		(suits)=4 (numbers)=13 choose 5
+5	Straight: 9180		(top)=9 *(suits)=4^5-4
+6	3of: 54912		(number)=13 (suits)=4 (kicker numbers)=12*11/2 (kicker suits)=4*4
+7	Two Pairs: 123552	(ranks)=13*12/2 (suits)=(4*3/2)^2 (kicker)=11*4
+8	Pair: 1098240	(rank/suit)=13*4*3/2 (kickers)=12*11*10/(3*2)*4^3
+9	High Card: 1303524	remainder
+
+2-A, five suits
+possible hands total: 65 choose 5= 8259888
+1	5of: 13			(number)=13 (suits)=1
+2	Straight Flush: 45	(top)=9 (suits)=5
+3	4of: 3900		(number)=13 (suits)=5 (kicker number)=12 (kicker suit)=5
+4	Flush: 6435		(suits)=5 (numbers)=13 choose 5
+5	Full House: 15600	(3of)=13 (suits)=5*4/2 (overs)=12 (overs suit)=5*4/2
+6	Straight: 28080		(top)=9 (suits)=5^5-5
+7	3of: 214500		(number)=13 (suits)=5*4/2 (kicker numbers)=12*11/2 (kicker suits)=5*5
+8	Two Pairs: 429000	(ranks)=13*12/2 (suits)=(5*4/2)^2 (kicker)=11*5
+9	Pair: 3575000		(rank/suit)=13*5*4/2 (kickers)=12*11*10/(3*2)*5^3
+10	High Card: 4158928	remainder
+
+2-G, five suits
+possible hands total: 75 choose 5= 
+1	5of: 15			(number)=15 (suits)=1
+2	Straight Flush: 55	(top)=11 (suits)=5
+3	4of: 5250		(number)=15 (suits)=5 (kicker number)=14 (kicker suit)=5
+4	Flush: 15,015		(suits)=5 (numbers)=15 choose 5
+5	Full House: 21,000	(3of)=15 (suits)=5*4/2 (overs)=14 (overs suit)=5*4/2
+6	Straight: 34,320		(top)=11 (suits)=5^5-5
+7	3of: 341,250		(number)=15 (suits)=5*4/2 (kicker numbers)=14*13/2 (kicker suits)=5*5
+8	Two Pairs: 682,500	(ranks)=15*14/2 (suits)=(5*4/2)^2 (kicker)=13*5
+9	Pair: 6,825,000		(rank/suit)=15*5*4/2 (kickers)=14*13*12/(3*2)*5^3
+10	High Card: 	remainder
+
+2-G, six suits
+possible hands total: 90 choose 5= 
+1	Straight Flush: 66	(top)=11 (suits)=6
+2	5of: 90			(number)=15 (suits)=6
+3	4of: 7560		(number)=15 (suits)=5 (kicker number)=14 (kicker suit)=6
+4	Flush: 18,018		(suits)=6 (numbers)=15 choose 5
+5	Full House: 63,000	(3of)=15 (suits)=6*5*4/6 (overs)=14 (overs suit)=6*5/2
+6	Straight: 85,470		(top)=11 (suits)=6^5-6
+7	3of: 737,100		(number)=15 (suits)=6*5/2 (kicker numbers)=14*13/2 (kicker suits)=6*6
+8	Two Pairs: 1,842,750	(ranks)=15*14/2 (suits)=(6*5/2)^2 (kicker)=13*6
+9	Pair: 17,690,400		(rank/suit)=15*6*5/2 (kickers)=14*13*12/6*6^3
+10	High Card:	remainder
+
+
+
+

@@ -1,0 +1,29 @@
+Stand Back, I'm Going to Try Science: Cards are dealt into a group of face-up patterns and a face-down tableau. Players each can look at some part of the tableau, and can take actions to inspect more of it, but seeing the entire thing is infeasible. Players win by placing successful bets on how closely the patterns will match the tableau.
+
+OK, the betting part is weird. And probably bad. Maybe less 'bets' and more explicitly 'predictions'. Place something like a roulette board?
+Also bad: having explicit patterns to match. That makes the deck need to be huge.
+
+One card face down in front of each player (on that player's field). They may look at that card. Two cards per player face down in the center. They *may not* look at these cards. These 3*players cards are 'the hand'.
+One card per player is dealt face up to the side. These cards are not in the hand. They are public.
+
+Fixed deck of cards; one 'suit' per player (just color) with one card of each rank per suit.
+
+Things to make predictions about:
+Longest Pair/3of/4of/5of/etc.
+Second-longest pair/3of/4of/etc. (if there are two of the same length, that counts for this) 
+Most common color
+Most common rank
+Sum of the cards
+Longest straight
+Biggest flush
+
+
+Actions you can take:
+Once per game: Take a card from the center and move it to your field (you may now look at it like the other card on your field).
+Draw three cards from the deck and put them face down behind your field. You may look at them at any time, and they do not count as part of the hand being predicted.
+Move a bet left or right on a betting track. (allow partial moves?)
+Increase a bet (you may never decrease a bet).
+
+
+
+This is definitely interesting. I don't know whether it will be *fun*.

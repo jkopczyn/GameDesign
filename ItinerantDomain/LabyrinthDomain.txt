@@ -1,0 +1,55 @@
+Cards
+
+Move: Move XXthisXX pawn an extra space
+	Move XXyour pawnsXX up to three extra spacesXX, split any wayXX.
+	Move XXyour pawnsXX up to three extra spaces, then you may have your pawns exchange places, or move either of your pawns to the other pawn's location.
+
+Options: This pawn may play two more cards this turn
+	This pawn may play two more cards this turn. After you recruit this turn, this pawn may discard its hand.
+	Discard any number of cards. For each card discarded, this pawn may play an additional card this turn.
+
+Change: Push a line one space, wrapping around the extra tile to the opposite side.  
+	Push a line one space, or swap two adjacent squares.
+	Push any two lines one space each, or swap any two squares anywhere.
+
+Recruit: This pawn may recruit two more cards this turn.
+	This pawn may recruit up to two more cards this turn, or recruit one extra and promote a card from its hand.  
+	This pawn may recruit up to two more cards this turn. Take a free victory point chip.
+
+
+
+Victory: This card is worth 2 victory points at the end of the game.
+	This card is worth 4 victory points at the end of the game.
+	This card is worth 8 victory points at the end of the game.
+
+Piles: 10/5/5 for all ordinary cards, 12/8/6 for victory.
+
+
+Locations: Each location either has point cards or the ability to buy upgrades. It also has two of the four other things; every combination is represented, so there are 12 locations total. Each is two spaces from its nearest neighbors.
+Actually a 13th location in the center, which has only points and upgrades, might make sense. But have it further away from other spaces. Possibly a specific rules that you cannot move directly from the outside to the inside, and must cool your heels for a full turn. This is the endgame area.
+
+...this doesn't have a mechanism for buying new pawns. Do I want one? I think probably not.
+
+Each turn, move all pawns up to one space each, play a card per pawn, then recruit a card per pawn. 
+
+
+So, outline: move pawns around the board, without extra help two turns to get to a new buying location. Each starts with two Move cards and may play some number of cards and then buy one new card into its discard pile. When it exhausts its hand, it draws its entire discard pile as its new hand.
+Cards don't have a cost (subject to change) but basic cards aren't very good. A buy can be spent to turn a card in hand into an upgraded version in discard, at the correct locations.
+Cards worth victory points can be bought at the correct locations, which are for the most part disjoint from the locations where you can purchase upgrades. These cards must be played to remove them from your hand, but do nothing.
+
+Game end condition: When any second-upgrade pile runs out, or when the first-upgrade points pile runs out.
+Subject to change; this might not be good at all.
+
+
+
+
+
+First draft was not fun and was too easy to solve.
+Trade is OP and makes movement unimportant. It is now removed.
+
+New thing: the board is not static. It is Labyrinth-like and the fourth card type moves tiles (upgraded versions can move occupied tiles). Promoting and buying VP should also be harder; make these be some spaces in the labyrinth.
+Two pawns? Maybe just one; try both.
+Hand building rather than deckbuilding is interesting and worth keeping, probably.
+Joe dislikes the static order of actions; I think I want to keep the set order, but it matters.
+
+There needs to be a method of picking starting locations, and a way of distinguishing the two pawns, if there are two pawns.

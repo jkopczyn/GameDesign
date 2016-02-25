@@ -1,0 +1,25 @@
+++ Definitely In
+
+High Fashion: a beauty pageant on top of a zeppelin, where you have to save it from crashing and look good doing it
+    I had several ideas in this general vein, and this was the most promising theme in terms of how likely it was that the mechanics would sync up in an interesting way. The general idea: a game where you all have shared goals, but there's a tradeoff where you can be less effective in order to score higher, with increased risk that all players lose.
+
+Extension Bridge: Trick-taking game, but with only one long trick, where a rock-paper-scissors style suit conflict moves the leader of the trick repeatedly. continues until some built-in countdown hits zero, possibly at an unpredictable time
+    I like this as a better way to do the Prey thing from that game they were showing at Gamestorm.
+
+Itinerant Domain: Pawn movement mixed with a deckbuilder (Eminent Domain style); in order to add cards of a particular type to a deck, you must move the pawn which carries that deck to the appropriate location. Probably you have 2-3 pawns per player and each of them carries their own deck. Cards are fairly simple effects.
+
+Mortal Engines: Each person plays a moving city with a few stats, and chases smaller cities to gain their resources and use them to upgrade your own. Use Smallworld map for playtesting, including Lost Tribes as small cities/monsters as medium cities, figure out some straightforward combat mechanic
+    combat mechanic: roll Nd6 for attack stat, Md6 for defense stat, they have to reduce their (attack+defense) by the margin of success. Three rounds if no victory. Ranged attacks let you roll (range-range)d6 and deal it against no defense.
+
+How to Keep an Idiot Busy: a number of auto-moving NPC figures move on particular paths; you don't affect them or any win-conditions directly but can alter the board to make them move across paths; each player has some separate VP sources on the board
+
+Best Laid Plans: Players are each dealt special power cards, which are secret. Players have several choices of strategy which are public, and take turns selecting strategies to fight at each of several locations. After all selections have been made by all players, all special powers are revealed and only then are the contests resolved. Strategies have a rock-paper-scissors relationship, so that while each secret power makes some choice of strategies more effective, telegraphing your powers too well could allow your opponents to RPS you into submission.
+    if I can figure out how to make RPS scale to a group of several players, this could be cool
+
+Stand Back, I'm Going to Try Science: Cards are dealt into a group of face-up patterns and a face-down tableau. Players each can look at some part of the tableau, and can take actions to inspect more of it, but seeing the entire thing is infeasible. Players win by placing successful bets on how closely the patterns will match the tableau.
+
+Trickery: draft a deck of cards, then play a basic trick-taking game with the cards you drafted. Some cards will be better only when led, others will change suit or number to partially match some other card in the trick, etc.
+
+Game where there are several 'prayers' you can make, like Bastion; each helps you and hurts you in some way. Substantial interaction to make it riskier.
+
+Tick Tock: A linear board marks down the seconds to Midnight, and the players are Tickmeisters trying to seize control of the Doomsday Clock and get to Midnight while holding it. Players draw and play cards to manipulate how far forward in time they move each turn and to attack other players to steal the clock. The earliest moment in time is always the next to take their turn.

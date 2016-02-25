@@ -1,0 +1,23 @@
+Firefly Rules Mods
+
+Basic problem: Players feel like they're capable of Misbehaving much sooner than they are.
+
+Possible solutions: 
+
+1) Split the deck easy/hard
+
+2) Action points
+
+
+Problems with 1: Reduces the amount Gun/Wrench/Talk are worth, and tricky to get the right balance
+	Probable best method: split into easy/hard, shuffle both, then take half of each and shuffle those together. Stack them like so: 1/4 Easy 1/2 Mix 1/4 Hard.
+	Possible further mod, if hard missions are too hard to come by: The first time one of the space decks reshuffles, shuffle each job deck. (Leave the discards where they are.)
+
+Problems with 2: When should you get them and how much is just enough? Potential to make things too easy.
+	Probable benefit: After you see the result, spend an action point to add another 1d6 (exploding as usual).
+	Potential method: Captain/Leader starts with 1 and can have up to 2, each other crew can have up to 1 (but starts with none). Whenever you Become Solid or get a Warrant Issued,  each crew gets an action point.
+
+	Benefits: Vaguely thematic, provides catch-up mechanic (if you're doing well you won't have opportunities to become solid), encourages getting more crew (which needs to be encouraged)
+	Drawbacks: Might cause people to go for crew as hard as appropriate, and then have things too easy.
+	Counterdrawback: Even with a solid crew, it's easy to run into Misbehaving you can't quite handle.
+	Countercounterdrawback: This might make Gear slightly redundant

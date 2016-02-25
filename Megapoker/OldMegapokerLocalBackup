@@ -1,0 +1,136 @@
+Structure of Arcturan Megapoker
+
+Winner: Player who's won the most money from the pot at the end. Play in chips, win in $.
+
+Each hand has a pot. Paid upgrades don't go into the pot, but enlargening the pot is a possible upgrade. The pot increases each hand ($5/$10/$15/$20/$25/$30/$35?). Winning earlier pots might increase what you have to bid in later rounds, but I can't think of a good mechanism, and it's probably too much of a runaway leader effect.
+
+Decks: 
+1)2-8, three suits (no clubs).
+2)2-10+2Jokers, three. 
+3)2-10+2Joker, four suits.
+4)2-QKA+2Joker, four.
+5)2-QKA+2Joker, five suits (stars).
+6)2-10PJKAG+4Joker, adding Page between 10 and Jack and God above Ace.
+7)2-G+4Joker, six suits (moons).
+
+Start with 25 in chips per hand. Chips don't carry over between hands. Maybe have this increase, too. Goes up by more if previous hands got doubled? Cool idea.
+
+Left of the dealer takes first turn, dealer rotates each hand.
+
+Each turn, each player takes a move. You may not pass (unless a showdown has been called and you have no money).
+
+
+
+Possible Moves:
+
+Call (free): Call the showdown. Take one more move, then go around the table once, with each *other* player getting one last move. Once each player has, everyone shows their hand and the best hand wins the pot.
+Trade (free): Offer a card from your hand. You may reveal the card entirely, or choose to describe it by which categories it is in. Each other player may refuse, or offer a card from their hand in return, which they choose to give information about in the same way. Players may not lie about this. Once you have heard all offers, you may accept an offer or keep the card.
+Categories: Suit, Color (red, black, or yellow), Number, Low(2-4),Middle(5-7),High(8-10),Face(Page-King),Mega(A,G,Joker).
+Auction (free): You may reveal a card and auction it off. Bidding starts at 10. High bid pays to you and takes the card. If no player bids, the bank buys the card for 10.
+Draw (5): Draw two cards and put them into your hand. Only the best five-card hand will score.
+Wild (10): Declare a number Wild. All cards with that number in any player's hand are wild cards and can be used as any card.
+Raise (15): Double the pot for the round. If this is taken multiple times, it goes 10->20->30->40, not 10->20->40->80.
+Joker (15): Take a Joker (not from the deck) and add it to your hand.
+Buy In (special): Spend up to $15 for an equal number of chips. Cannot be reversed.
+
+Ranking Hands:
+Hands which are least probable in a random five-card hand (excluding wilds) are worth the most, with “High Card Only” always being considered the weakest. (Though it’s less common than a simple Pair at some points.) This changes from hand to hand as the deck changes. Hands considered:
+Straight Flush, Flush, Straight, Full House, Four of a Kind(where possible), Five of a Kind (where possible), Three of a Kind, Two Pair, Pair.
+Hands which rely on a joker or a card being used as a wild are considered worse than equivalent-rank hands which do not. Ties are split between the tying players, rounded down.
+
+2-8, three suits
+possible hands total: 21 choose 5= 20349
+
+0.3	5of
+0.6	4of			extrapolating down from a four-suit version puts it here
+1	Straight Flush: 9	(8,7,6)=3 *(suits)=3
+2	Flush: 63		(suits)=3 (numbers)=7 choose 5=
+3	Full House: 126	(3of)=7 (overs)=6 (overs suit)=3
+4	Straight: 720		(8,7,6)=3 *(suits)=3^5-3
+5	3of: 945		(number)=7 (kicker numbers)=6*5/2 (kicker suits)=3*3
+6	Two Pairs: 2835	(ranks)=7*6/2, (suits)=3*3, (kicker)=5*3
+7	Pair: 11340		(rank/suit)=7*3, (kickers)=(6*5*4/3*2)*(3^3)
+8	High Card: 4311	remainder
+
+2-10, three suits
+possible hands total: 27 choose 5= 80730
+
+0.5	5of
+1	Straight Flush: 15	(top)=5 *(suits)=3
+1.5	4of
+2	Full House: 216	(3of)=9 (overs)=8 (overs suit)=3
+3	Flush: 378		(suits)=3 (numbers)=9 choose 5=126
+4	Straight: 1200		(top)=5 *(suits)=3^5-3
+5	3of: 2268		(number)=9 (kicker numbers)=8*7/2 (kicker suits)=3*3
+6	Two Pairs: 6804 	(ranks)=9*8/2 (suits)=3*3 (kicker)=7*3
+7	Pair: 40824		(rank/suit)=9*3 (kickers)=8*7*6/(3*2)*3^3
+8	High Card: 29025	remainder
+
+2-10, four suits
+possible hands total: 36 choose 5= 376992
+
+0.5	5of
+1	Straight Flush: 20	(top)=5 *(suits)=4
+2	4of: 288		(number)=9 (kicker number)=8 (kicker suit)=4
+3	Flush: 504		(suits)=4 (numbers)=9 choose 5=126
+4	Full House: 1728	(3of)=9 (suits)=4 (overs)=8 (overs suit)=4*3/2
+5	3of: 16128		(number)=9 (suits)=4 (kicker numbers)=8*7/2 (kicker suits)=4*4
+6	Straight: 5100		(top)=5 *(suits)=4^5-4
+7	Two Pairs: 36288	(ranks)=9*8/2 (suits)=(4*3/2)^2 (kicker)=7*4
+8	Pair: 193536		(rank/suit)=9*4*3/2 (kickers)=8*7*6/(3*2)*4^3
+9	High Card: 123400	remainder
+
+2-A, four suits
+possible hands total: 52 choose 5= 2,598,960
+
+0.5	5of
+1	Straight Flush: 36	(top)=9 *(suits)=4
+2	4of: 624			(number)=13 (kicker number)=12 (kicker suit)=4
+3	Full House: 3744	(3of)=13 (suits)=4 (overs)=12 (overs suit)=4*3/2
+4	Flush: 5148		(suits)=4 (numbers)=13 choose 5
+5	Straight: 9180		(top)=9 *(suits)=4^5-4
+6	3of: 54912		(number)=13 (suits)=4 (kicker numbers)=12*11/2 (kicker suits)=4*4
+7	Two Pairs: 123552	(ranks)=13*12/2 (suits)=(4*3/2)^2 (kicker)=11*4
+8	Pair: 1098240	(rank/suit)=13*4*3/2 (kickers)=12*11*10/(3*2)*4^3
+9	High Card: 1303524	remainder
+
+2-A, five suits
+possible hands total: 65 choose 5= 8259888
+1	5of: 13			(number)=13 (suits)=1
+2	Straight Flush: 45	(top)=9 (suits)=5
+3	4of: 3900		(number)=13 (suits)=5 (kicker number)=12 (kicker suit)=5
+4	Flush: 6435		(suits)=5 (numbers)=13 choose 5
+5	Full House: 15600	(3of)=13 (suits)=5*4/2 (overs)=12 (overs suit)=5*4/2
+6	Straight: 28080		(top)=9 (suits)=5^5-5
+7	3of: 214500		(number)=13 (suits)=5*4/2 (kicker numbers)=12*11/2 (kicker suits)=5*5
+8	Two Pairs: 429000	(ranks)=13*12/2 (suits)=(5*4/2)^2 (kicker)=11*5
+9	Pair: 3575000		(rank/suit)=13*5*4/2 (kickers)=12*11*10/(3*2)*5^3
+10	High Card: 4158928	remainder
+
+2-G, five suits
+possible hands total: 75 choose 5= 
+1	5of: 15			(number)=15 (suits)=1
+2	Straight Flush: 55	(top)=11 (suits)=5
+3	4of: 5250		(number)=15 (suits)=5 (kicker number)=14 (kicker suit)=5
+4	Flush: 15,015		(suits)=5 (numbers)=15 choose 5
+5	Full House: 21,000	(3of)=15 (suits)=5*4/2 (overs)=14 (overs suit)=5*4/2
+6	Straight: 34,320		(top)=11 (suits)=5^5-5
+7	3of: 341,250		(number)=15 (suits)=5*4/2 (kicker numbers)=14*13/2 (kicker suits)=5*5
+8	Two Pairs: 682,500	(ranks)=15*14/2 (suits)=(5*4/2)^2 (kicker)=13*5
+9	Pair: 6,825,000		(rank/suit)=15*5*4/2 (kickers)=14*13*12/(3*2)*5^3
+10	High Card: 	remainder
+
+2-G, six suits
+possible hands total: 90 choose 5= 
+1	Straight Flush: 66	(top)=11 (suits)=6
+2	5of: 90			(number)=15 (suits)=6
+3	4of: 7560		(number)=15 (suits)=5 (kicker number)=14 (kicker suit)=6
+4	Flush: 18,018		(suits)=6 (numbers)=15 choose 5
+5	Full House: 63,000	(3of)=15 (suits)=6*5*4/6 (overs)=14 (overs suit)=6*5/2
+6	Straight: 85,470		(top)=11 (suits)=6^5-6
+7	3of: 737,100		(number)=15 (suits)=6*5/2 (kicker numbers)=14*13/2 (kicker suits)=6*6
+8	Two Pairs: 1,842,750	(ranks)=15*14/2 (suits)=(6*5/2)^2 (kicker)=13*6
+9	Pair: 17,690,400		(rank/suit)=15*6*5/2 (kickers)=14*13*12/6*6^3
+10	High Card:	remainder
+
+

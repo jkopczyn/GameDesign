@@ -1,0 +1,21 @@
+Trickery: draft a deck of cards, then play a basic trick-taking game with the cards you drafted. Some cards will be better only when led, others will change suit or number to partially match some other card in the trick, etc.
+
+Cards which do matching should be mostly low values, cards which get +/- mostly high values.
+
+Suggested modifiers:
+Matches rank of previous card played (3s)
+Matches rank of lead (2s)
+Matches suit with previous card (10s)
+Matches suit led (As,6s)
+Always trump(very strong) (7s)
+Counts as 4 higher when led (Qs, 4s)
+Rule: If this is led, cards must follow suit if possible. (Ks, 9s, 5s)
+Rule: If this is led, there is no trump for this trick. (Js, 8s)
+
+
+Trick-taking mechanics: Flip over a card; this suit is trump. Winner of previous trick leads for next trick. Need not follow suit, except when you do (If a K,9,or 5 is led).
+Dealing with ties: Trump first, then the suit led, then the other suits. Make an order of suits where you go down the list from what's led. (Spade, Club, Heart, Diamond, Star, Moon) For ties within the same suit, whichever was played first wins.
+
+Deck: One suit per player? That would enable a draft of two six-card packs (one each way), with n-1 cards left out and 1 card face up as trump. That's a little small. 2 per player plus 2 more? 2 12-card packs, or 3 8-card packs. Manageable. For 3 players, it would be 3 7-card packs or 2 10-card packs. For 4, it would be 78; that's 3 packs of 6 or 2 packs of 9. For 5, it would be 91, which is 3 packs of 6 / 2 packs of 9 if I'm OK with everything being in the trick somewhere, or 3 packs of 5 / 2 packs of 8 if I'm not. OK, 5 would have to have packs go 6/6/5 rather than 5/5/5. That's ugly.
+Hand sizes would be 2:24, 3:20/21, 4:18, 5:18/16. Those hands are pretty big.
+If n+1 suits? 2 players would have 18-card hands(3 of 6 or 2 of 9 (rem 2)), 3 would have 15/16 hands(3 of 5(rem 6) or 2 of 8 (rem 3)), 4 would have 15/14 hands (3 of 5 (rem 4) or 2 of 7 (rem 8)), 5 would have 15/14 (3 of 5 (rem 2) or 2 of 7 (rem 7))

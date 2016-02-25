@@ -1,0 +1,26 @@
+Mortal Engines: Each person plays a moving city with a few stats, and chases smaller cities to gain their resources and use them to upgrade your own. Use Smallworld map for playtesting, including Lost Tribes as small cities/monsters as medium cities, figure out some straightforward combat mechanic
+
+
+Stats:
+
+Attack
+Defense
+
+Range
+Speed
+
+It should be twice as hard to upgrade Range and Speed as to upgrade Attack and Defense. And half as hard to repair damage as to increase.
+
+Standard PC starting city:
+Attack 4, Defense 4, Range 1, Speed 2
+
+Microcity: Attack 1, Defense 1, Range 1, Speed 1
+Minicity: Attack 2, Defense 2, Range 1, Speed 1
+Fortification: Attack 1, Defense 4, Range 2, Speed 0. Defeating a fortification grants no improvements except a total repair. These are placed to wall off sections of the board; confrontations with other players require defeating them first.
+
+
+Placing NPC cities: At the beginning of the game, place ~3 microcities  per player and ~1 minicity per player. There should be designated spaces where they start.
+
+Every round, place one microcity per player on spaces where they spawned originally. Every other round, place 1 minicity per player.
+
+After about half a game (six rounds?), no longer place microcities, and place minicities every round.

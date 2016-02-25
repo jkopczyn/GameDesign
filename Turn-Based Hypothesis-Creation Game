@@ -1,0 +1,10 @@
+Turn-Based Hypothesis Game
+
+enemies move according to predefined patterns, but what those patterns are isn't described.
+
+create a system for proposing rules which the enemy follows, and get scored on how well they predict the movement
+	score it based on something like: RawScore(hypo)=movements predicted correctly out of 250 moves; Kolmogorov(hypo)=function of length, shorter -> smaller; TotalScore=RawScore/Kolmogorov
+
+multiplayer is obvious; one person sets up a rule, opponent tries to solve it. Probably multiply the multiplayer score by the Kolmogorov of the true rule, to punish stupidly-complex edge case rules
+
+single player should probably allow some amount of control over the gamefield for testing purposes, though the hypothesis-evaluating gamefield should be partially randomized.

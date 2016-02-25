@@ -1,0 +1,74 @@
+High Fashion: a beauty pageant on top of a zeppelin, where you have to save it from crashing and look good doing it
+    I had several ideas in this general vein, and this was the most promising theme in terms of how likely it was that the mechanics would sync up in an interesting way. The general idea: a game where you all have shared goals, but there's a tradeoff where you can be less effective in order to score higher, with increased risk that all players lose.
+
+Blurb: Welcome to the Archduke Gaspar Centennial Beauty Pageant! To greet the incoming 1900s, the Archduke declared that the finest men of his duchy would build a great airship, and the finest women would compete in a spectacular beauty pageant aboard it.
+Unfortunately, the Archduke has a much better eye for beauty than mechanical skill. The airship was a wreck waiting to happen, and before the first round of the pageant had started, it did, and the crew can't keep all the problems under control. 
+YOU are the contestants. The duchy of Gaspar is known for its airship yards, and you've all learned a thing or two about them. With the crew overwhelmed and the judges too old and slow to help, you'll have to save the ship yourselves. Just one problem: The Archduke is a *fanatic* about beauty, and he insists that the pageant must continue. *gulp*
+
+
+Game runs in stages; pageant rounds and repair rounds trade off, something like 8 of each in the deck and 12 rounds total per game.
+	3/4 of the deck being seen seems good. At the most lopsided, 1/3 of the game is one type of round rather than 1/2. 4 of each / 6 rounds seems a little lopsided.
+
+Players have cards dealt from a deck (deckbuilder? Probably not.) with various maneuvers. Three(originally said five, three seems better) cards stay in front of each player, and when a new card is played it pushes the oldest card off. By default, modifiers on the cards stay in effect as long as the cards are on the table.
+
+Each card has three stats, and possibly extra text. These are:
+Style: appearance. Can be positive or negative, matters during pageant rounds.
+Repair: Helpfulness toward fixing the airship. Usually positive or zero; occasionally small negative. Each repair round, this has to beat a certain theeshold when totalled across all players, or the airship will crash. (Probably more like two failures are a crash, with a sufficient oversuccess removing the failure)
+Grime: Residue of the ship's workings which shows up on you. Makes repairs more effective (the crew respect your authority), but hurts during pageant rounds (though it can be turned to your advantage).
+
+Structure of a round:
+
+Turn marker: The marker for which player starts the round is passed clockwise.
+
+Reveal: The top card of the round deck is turned over, and the players find whether it's a pageant or repair round. If a pageant, which judge is in charge is marked (this has minor effects on score for the round). If a repair, the target threshold will be marked.
+
+Play cards: Clockwise starting from the marker, the players each play a card. If they don't want to play any of the cards in their hand, they may do nothing, or choose to discard their hand and draw three new cards. If they take a new hand, they *must* play one of those cards. 
+	Playing a card knocks the oldest card on their field off.
+
+Resolve round: Score a pageant or determine crash status.
+
+Draw cards: Each player draws a card, whether or not they played one this round.
+
+End of round: Play proceeds to the next round.
+
+
+Special cards that should exist:
+
+Freshen Up: 1 Style, 0 Repair, 0 Grime.  Clear away all cards you have on the table. You may play another card.
+
+Quick Thinking: 0 S, 1 R, 0 G: If you have 2 or more Grime, you may play another card.
+
+
+Judges:
+Normal scoring: +Style, -Grime
+
+Terrified Judge (x3): Any contestant with 3 or more Repair visible gets +2 Style from this judge.
+
+The Archduke: This judge counts all Style at double value.
+
+Avant-Garde Judge: Any contestant with at least one Grime gets +2 Style from this judge.
+
+Judge (x5): No text
+
+Ship's Officer: This judge ignores Grime.
+
+Haughty Judge: The judge counts all Grime at double value.
+
+Repairs:
+Normal threshold: 1 per player. Cards increase this
+
+Wasn't that important? (x6): +1
+
+Tighten those up, would you? (x2): 0
+
+EVERYTHING IS ON FIRE! (x1): x2
+
+Everything's under control! (x2): +2
+
+We'll manage. (x1): -1
+
+
+Things to consider varying: Should cards be played in sequence, or hidden-select-reveal? sequence has Kill Doctor Lucky syndrome, hidden is probably somewhat faster but more likely to result in unexpected failure. Also, hidden is less thematic (for the pageant portion at least).
+Maybe hidden for the repairs, visible for the pageant?
+Also possible: multiple cards, some cards have pure effects and others have value, play one of each each round.
+

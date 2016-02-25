@@ -1,0 +1,27 @@
+
+<!-- saved from url=(0047)http://inventwithpython.com/randommechanic.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>
+mechanics = ["Avoiding Unkillable Objects", "Instant Death", "Game Repeats Until You Die", "Remember an Increasing Number of Things", "Repeat Pattern", "Forced Constant Movement", "Block Puzzles", "Game Keeps Gets Harder Until You Die", "Uncountable Number of Possible Paths", "Big Gains for You Can Be Big Gains for Enemy", "Block Path", "Information Overload", "Disinformation", "Switch Modes", "Push Mole Down, Mole Pops Up", "Cut Off One Head, Two Grow Back", "Bouncing Object", "Gravity", "Mouse Dexterity", "Spinning Plates", "Teleports", "Squad", "Scarce Resource", "Jumping", "Hidden Image / Where's Waldo?", "Timed", "Protect a Target", "Undirected Exploration", "Bullet Hell", "Buy Low, Sell High", "Brawling", "Dialogue Tree", "Building", "Race"];
+
+function getMechanics() {
+    var mechs = '<center>';
+    var indexes = [];
+    while (indexes.length < 3) {
+        randomIndex = Math.floor(Math.random() * mechanics.length);
+        if (indexes.indexOf(randomIndex) == -1) {
+            indexes.push(randomIndex);
+            mechs += mechanics[randomIndex] + '<br /><br />';
+        }
+    }
+    mechs += '</center>';
+
+    document.getElementById('randomMechanics').innerHTML = mechs;
+}
+
+
+
+</script>
+
+</head><body><p></p><center><input type="button" value="Get Random Mechanics!" onclick="getMechanics()"></center><p></p>
+<div style="font-family: sans-serif;" id="randomMechanics"><center>Protect a Target<br><br>Information Overload<br><br>Jumping<br><br></center></div>
+</body></html>

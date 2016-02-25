@@ -1,0 +1,61 @@
+Itinerant Domain: Pawn movement mixed with a deckbuilder (Eminent Domain style); in order to add cards of a particular type to a deck, you must move the pawn which carries that deck to the appropriate location. Probably you have 2-3 pawns per player and each of them carries their own deck. Cards are fairly simple effects.
+
+Cards
+
+Move this pawn an extra space
+	Move your pawns up to three extra spaces, split any way.
+	Move your pawns up to three extra spaces, then you may have your pawns exchange places, or move either of your pawns to the other pawn's location.
+
+This pawn may play two more cards this turn
+	This pawn may play two more cards this turn. After you buy cards this turn, this pawn may discard its hand.
+	Discard any number of cards. For each card discarded, this pawn may play an additional card this turn.
+
+XXXXXThis pawn may give up to two cards from its hand to your other pawn and receive up to two cards from that pawn's hand. 
+XXXXX	This pawn may exchange up to two cards with your other pawn. After trading, you may trash up to two cards from among their hands.
+XXXXX	This pawn may exchange up to one card from its hand with up to one from the other pawn's hand. Any cards exchanged this way may be upgraded for free.
+
+This pawn may buy two more cards this turn.
+	This pawn may buy up to two more cards this turn, and may spend one of those buys to upgrade a card from its hand.  
+	This pawn may buy up to two more cards this turn. Take a free victory point chip.
+
+
+This card is worth 2 victory points at the end of the game.
+	This card is worth 4 victory points at the end of the game.
+	This card is worth 8 victory points at the end of the game.
+
+Piles: 10/5/5 for all ordinary cards, 12/8/6 for victory.
+
+
+Locations: Each location either has point cards or the ability to buy upgrades. It also has two of the four other things; every combination is represented, so there are 12 locations total. Each is two spaces from its nearest neighbors.
+Actually a 13th location in the center, which has only points and upgrades, might make sense. But have it further away from other spaces. Possibly a specific rules that you cannot move directly from the outside to the inside, and must cool your heels for a full turn. This is the endgame area.
+
+...this doesn't have a mechanism for buying new pawns. Do I want one? I think probably not.
+
+each turn, move all pawns up to one space each, then play cards. 
+possibilities: play all like Ascension, limited number of plays like Dominion, play all of one type like Eminent.
+
+Thinking about it, I don't think I want to have decks, per se. Each pawn will have a hand, and when it's exhausted they draw all their cards into their hand. Also, decks are very small and don't start particularly clogged. Probably start with two Move cards.
+
+So, outline: move pawns around the board, without extra help two turns to get to a new buying location. Each starts with two Move cards and may play some number of cards and then buy one new card into its discard pile. When it exhausts its hand, it draws its entire discard pile as its new hand.
+Cards don't have a cost (subject to change) but basic cards aren't very good. A buy can be spent to turn a card in hand into an upgraded version in discard, at the correct locations.
+Cards worth victory points can be bought at the correct locations, which are for the most part disjoint from the locations where you can purchase upgrades. These cards must be played to remove them from your hand, but do nothing.
+
+drew a board: 8-point star with spurs outward between each pair of points, center ring is split for relatively easy movement but a pawn must end turn when it enters a ring space. Must pass through the ring to the Palace space where both upgrades and points can be purchased.
+Make scan before I leave.
+
+Game end condition: When any second-upgrade pile runs out, or when the first-upgrade points pile runs out.
+Subject to change; this might not be good at all.
+
+
+
+
+
+OK, this draft was not fun and was too easy to solve.
+Trade is OP and makes movement unimportant. It is now removed.
+
+New thing: the board is not static. It is Labyrinth-like and the fourth card type moves tiles (upgraded versions can move occupied tiles). Promoting and buying VP should also be harder; make these be some spaces in the labyrinth.
+Two pawns? Maybe just one; try both.
+Hand building rather than deckbuilding is interesting and worth keeping, probably.
+Joe dislikes the static order of actions; I think I want to keep the set order, but it matters.
+
+There needs to be a method of picking starting locations, and a way of distinguishing the two pawns, if there are two pawns.

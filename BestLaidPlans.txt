@@ -1,0 +1,18 @@
+Theme: War of espionage
+
+Best Laid Plans: Players are each dealt special power cards, which are secret. Players have several choices of strategy which are public, and take turns selecting strategies to fight at each of several locations. After all selections have been made by all players, all special powers are revealed and only then are the contests resolved. Strategies have a rock-paper-scissors relationship, so that while each secret power makes some choice of strategies more effective, telegraphing your powers too well could allow your opponents to RPS you into submission.
+
+don't need much in the way of symmetry breaking between strategy types; cards can handle that.
+
+Cards: 2x bonus for Bs if your Bs are the majority in a space. All your Bs count as Cs. 3x bonus for your Bs if all your units in the space are Bs. 2x bonus if your As/Bs/Cs are perfectly even in a space.
+
+    if I can figure out how to make RPS scale to a group of several players, this could be cool
+Simplest possible method first: Three types, (A/B/C), each 3x as effective when fighting the next of the three.
+The probable best way is to totally disallow placing troops in a space two other players are contesting. This implies there should be an super-linear number of spaces to contest as player number grows.
+
+2 players: 4 areas	1 pair
+3 players: 9 areas	3 pairs
+4 players: 16 areas	6 pairs
+
+
+...this doesn't have that much interesting depth. It is probably not worth focusing on.

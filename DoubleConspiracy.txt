@@ -1,0 +1,43 @@
+
+"Creed", a Conspiracy-based multiplayer variant.
+This is a playtest name, better names include Venezia, Kingmaker, Illuminati, Bang! Magic
+
+Ideally played as a multiplayer Cube draft, structured this way:
+
+Draft one pack of Cube to the left.
+Draft the Creed mini-packs.
+Draft the second Cube pack to the right.
+Draft the third Cube pack to the left.
+Build.
+Reveal unchosen Roles.
+Play.
+
+Roles:
+
+King (Sheriff): Unlike other roles, this is public. The King (or Kings) starts with 30 life and 8 cards (or 60 life and 8 cards if played with Commander) and has no reveal power. The King wins if he is the only King remaining in the game, and all other remaining players are Loyalists.
+
+Loyalist (Deputy): The Loyalists win if the remaining players are one King and some number of Loyalists. If a Loyalist is killed while their are multiple Kings, they neither win nor lose, but if they die while there is only one King, they win if and only if that King wins. 
+
+Rebels (Outlaws): The Rebels win if they remain in the game and all Kings are dead. A Rebel who has been eliminated loses.
+
+Usurper (Renegade): The Usurper wins if they are the last player remaining in the game and loses otherwise. This means that they must protect the King and eliminate the Rebels before moving in for the kill on the King and his Loyalists.
+
+
+Reveal Powers:
+Each Role card other than the King cards has a Reveal Power. This power has a cost (usually a mana cost) and a timing restriction. At any time within that restriction, you may reveal your Role and pay the power cost to receive its effect. Not all Role cards of the same type have the same Reveal Power, and each Reveal Power shows up on at least two Roles.
+
+Inquisitor: [3], during your end of combat step, costs [1] less to activate for each creature that dealt damage to the targeted opponent this turn: Target opponent must show you their Role card. Special: A revealed Inquisitor may activate this ability as many times as they wish.
+Inquisitor show up on Loyalists and Rebels.
+
+Henchman: [X]: Put ]X[ 1/1 white Soldier tokens with Defender onto the battlefield under the control of target player. Activate this only if there are creatures attacking that player.
+Henchman shows up on Loyalists and Usurpers.
+
+Bomber: [5]: Deal 5 damage to target player and 2 damage to each creature they control. Activate this only during your upkeep.
+Bomber shows up on Rebels and Usurpers.
+
+
+
+
+Better idea: Every Role card has a Reveal Power and a Role. Each player picks two Role cards, but gets their choice of which to use as Role and which as Power. The Role complement depends on the number of players, but once arranged it is shuffled into two halves; the first half starts at a random player and goes right, then the last player to draft from it gets the second half, picks one, and passes left, like Catan village placement.
+
+

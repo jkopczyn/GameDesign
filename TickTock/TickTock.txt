@@ -1,0 +1,51 @@
+Second Iteration:
+
+The board is divided into periods ("seconds"), each with five squares ("moments"), ending at Midnight. All times after Midnight (off the board) are considered a single second containing only one moment. Normally, every time you take a turn you move forward one second, but this can be changed by spending Ticks or Tocks.
+
+
+Actions you can take:
+
+A Tick: Spend up to five Ticks to make you or someone else move further forward in time this turn by one moment per Tick.
+
+Stick: Combine Ticks and/or Tocks: Three Ticks make a Tock, and three Tocks make a Tack.
+
+A Tock: Spend up to five Tocks to make you or someone else move less far forward in time this turn. If used on someone else, they are moved backward by one moment per Tock. If used on yourself, each Tock reduces your normal forward movement by up to *two* moments; this can cause you to move backward if you spend three or more Tocks.
+
+Stock: Look at the top three cards of the deck. Play one of them (receiving the appropriate Ticks and Tocks) and reveal the others. Choose one of the revealed cards; move forward by one moment for each Tick on the card and backward by one moment for each Tock. Then discard both cards you didn't keep. You cannot take this action if you're currently holding the Clock because you might drop it while looking for new things.
+
+A Tack: Use a Tack to Attack. If you're in the same Second as the player with the Armageddon Clock, spend a Tack to move to their moment and seize it from them. Then you move away normally.
+
+Stack: If you are in the same moment (less than one moment away?) as the Armageddon Clock, you can grab it! The holder of the Clock gets one free Tick and one free Tock whenever they cross into a new second, and if you reach midnight with the Clock, you win!
+However, holding onto the Clock isn't easy. If anyone forcibly moves you while you're holding the clock, spend a Tick or Tock to hold on; a Tick is you were pushed forward, or a Tock if backward.
+If someone else is holding the clock when you try to grab it, you may bid Ticks and Tocks for control: they must match you Tick for Tick and Tock for Tock to hold on. All time spent this way is discarded regardless.
+
+Turn order: Whichever player is earliest in time takes their turn. Sometimes you will take several turns strung together, and sometimes you won't act for several turns. It's all a matter of good timing.
+
+End of the game: The first player to reach Midnight with the Armageddon Clock wins.
+
+The Deck: cards can give 2-5 Ticks, 1-3 Tocks, and occasionally a Tack or special card. split about 20-20-10 ticks/tocks/specials.
+
+Speed Limit: No player can have more than 15 unused total Ticks,Tocks,and Tacks. Cards must be played immediately (hand limit 0). Special cards are kept face up on the table until used, and don't count toward the speed limit.
+
+
+
+First Iteration
+It's 10 minutes to midnight, and every Tickmeister wants to be holding the Armageddon Clock when it strikes. Collect Ticks, mess with time, and make sure you seize control in time.
+
+3 Ticks to a Tock, 3 Tocks to A Tack
+
+time chart; markers for each player and for the clock striking. Ticks and Tocks can be used to move people in time; either one specific player, or everything other than one player (which always includes the Clock).
+
+Every ten seconds, the Clock moves forward and whoever is holding it receives one Tick and one Tock.
+
+Ticks move things forward along the track, Tocks move things backward. Tacks are needed to at-Tack someone.
+
+Potential: If you move the person with the clock and don't move the clock at the same time, they have to spend a Tick to hold on?
+
+Each player draws a card every time it comes up to their turn; cards can give 2-5 Ticks, 1-3 Tocks, and occasionally a Tack or special card.
+
+Things to do:
+
+Rummage: Slip around in nearby time for something useful. Look at two cards from the top of the deck and keep one of them, but roll 2dF and move that many spaces (+ for forward, - for backward).
+
+Tick: Spend up to three Ticks to either move one player forward along the track by one space per

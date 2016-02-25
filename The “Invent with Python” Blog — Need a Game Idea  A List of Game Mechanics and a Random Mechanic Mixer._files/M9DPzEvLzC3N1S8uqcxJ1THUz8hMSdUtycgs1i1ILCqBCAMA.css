@@ -1,0 +1,48 @@
+/* See http://code.google.com/p/minify/wiki/CommonProblems#@imports_can_appear_in_invalid_locations_in_combined_CSS_files */
+body{margin:0em;padding:0em;color:black;background:white;font-family:'Helvetica Neue',Arial,Helvetica,sans-serif;font-size:0.9em;line-height:1.5em}#page{margin:8em
+auto;padding:0em;width:65em}a{color:#0fa661;background:inherit;text-decoration:none}a:visited{color:#00b060;background:inherit}a:hover{text-decoration:underline}a
+img{border:0px
+none}.alignleft{float:left}.alignright{float:right}blockquote{margin:1em
+2em 1em 1em;padding:1em
+1em 1em 1em;background-color:d5dbff;font-size:1.1em;border:1px
+solid gray}#header{margin:0em;border:0px
+solid gray;padding:0em;width:60em}#header
+a{color:#0fa661;background:inherit;text-decoration:none}#header
+h1{margin:0em;border:0px
+solid gray;padding:0em;font-size:3.5em;float:left;min-width:6em}#header
+#tagline{margin:0.75em 0em 0em 2em;border:0px
+solid gray;padding:0.5em 0em 0.5em 2em;color:gray;background:inherit;float:left}#content{margin:0em;padding:10px;width:45em;float:left}#content
+h2{margin:0em
+0em 0.75em;padding:0em;line-height:1.6em;font-size:1.5em}#content
+.post{margin:2em
+0em 0em;border:solid 1px lightgray;padding:0.5em}#content
+h3{margin:0em;padding:0em;font-size:1.3em;line-height:1.4em}#content h3:first-letter {font-size:1.5em}#content
+.postmetadata{color:#777;background:inherit;font-size:0.9em}#content
+.navigation{margin:2em
+0em 0em;padding:0em;display:block}#content
+.goback{margin:0em
+0.5em 0em 0em;padding:0em;float:left;font-size:1.25em}#content
+.goforward{margin:0em
+0em 0em 0.5em;padding:0em;float:right;font-size:1.25em}#content
+#comments{margin:2em
+0em 1em;padding:0em;clear:both}#content
+.commentlist{margin:0em;padding:0em;font-size:0.9em}#content .commentlist
+li{margin:0em;padding:0em;list-style-type:none}#content .commentlist
+img.avatar{float:right;margin-left:1em}#content
+.commentmetadata{margin:0em
+0em 2em;color:#777;background:inherit}#content
+#respond{margin:2em
+0em 1em;padding:0em;clear:both}.aligncenter{display:block;margin-left:auto;margin-right:auto}.alignleft{float:left}.alignright{float:right}.wp-caption{border:1px
+solid #ddd;text-align:center;background-color:#f3f3f3;padding-top:4px;margin:10px}.wp-caption
+img{margin:0;padding:0;border:0
+none}.wp-caption-dd{font-size:11px;line-height:17px;padding:0
+4px 5px;margin:0}#sidebar{margin:4em
+0em;padding:0em;width:16em;float:right}#sidebar
+h2{margin:0em;padding:0em;font-size:1.0em}#sidebar h2 a, #sidebar h2 a:visited{color:black;background:inherit}#sidebar h2 a:hover{color:white;background:#1070c0}#sidebar
+ul{margin:0em;padding:0em}#sidebar ul
+li{margin:0em
+0em 0.5em;padding:0em;list-style-type:none}#sidebar ul li p, #sidebar ul li ul, #sidebar ul li
+ol{font-size:0.8em}#sidebar ul li ul li, #sidebar ul li ol
+li{margin:0em;padding:0em}#sidebar
+.textwidget{font-size:0.8em}#footer{margin:0em;padding:0em;width:60em;clear:both}#footer
+p{margin:0em;padding:0em;font-size:0.8em;text-align:center}code{font-size:14px}pre{font-size:14px}@import url("http://inventwithpython.com/css/pastie_pygments_style.css");.codetextarea{width:100%}.hide-this-part{display:none}.hide-this-part-more{color:blue;cursor:pointer;margin-bottom:15px;text-decoration:underline}

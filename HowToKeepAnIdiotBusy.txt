@@ -1,0 +1,10 @@
+How to Keep an Idiot Busy: a number of auto-moving NPC figures move on particular paths; you don't affect them or any win-conditions directly but can alter the board to make them move across paths; each player has some separate VP sources on the board
+Alternate name: Wandering Monsters (is that taken?)
+
+Have a dungeon-like map, with a bunch of fork points. There are a bunch of monsters (6 or 7?) who you can't interfere with directly, and who move each round according to a symbol/card system like Arkham Horror.
+
+Different paths have different lengths, and some of them have special areas with symbols on them. Each player has secretly-dealt goals, which are something like "Have a monster destroy <X>", "Keep any monster from finding <X>", or "Make the <M> fight the <N>". When one of these things happens (or at the end of the game, for negative goals), you can redeem the goal card for VP.
+
+After ten rounds, the game ends and scores are totaled.
+
+monsters have a ranking of strength; when two fight, the weaker one loses a full round of movement to recover.

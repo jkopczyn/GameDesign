@@ -1,0 +1,39 @@
+In the skylanes of Arcturus, the traders of the Long-Haul Association have little to do between trading stops and a long time to do it in. To keep their haggling skills sharp, they play poker. But not just any poker; the rules are subject to change by the highest bidder, cards are bought and sold, and no one quite knows when the hand ends. This is the chaotic game known as
+Arcturan Megapoker!
+
+Megapoker is played with an expanded deck by 2-9 players. There are six suits: spades and clubs are black, hearts and diamonds red, and stars and moons yellow. Each suit has 15 cards; 9 numbered cards (2 to 10), and 6 honor cards: Page, Jack, Queen, King, Ace, and God. There are also 4 Jokers, which always count as wild cards.
+
+Megapoker is played several hands in succession: Traditionally, the first player to win three hands across a series is the Master Trader, and gets special privileges over those he defeated. It can be played in longer or shorter series instead, as desired.
+
+In each hand, each player is dealt five cards at random and receives $25 in chips. Four additional cards are dealt face-up in the center of the table; these cards are available to be auctioned using the Bid action. If purchased, they are not replaced.
+
+ Play starts to the left of the dealer and proceeds clockwise. On each player’s turn, they take one action. Players may not pass; a player with no money must sell a card, start a bid, offer to trade a card away, or call the showdown.
+
+Call (free): Call the showdown. Take one more action, then go around the table once, with each other player getting one last turn. Once each player has, everyone shows their hand and the best hand wins the pot.
+Trade (free): Offer a card from your hand. You may reveal the card entirely, or choose to describe it with one or more categories it falls in. Each other player may refuse, or offer a card from their hand in return, which they choose to give information about in the same way. Players may not lie about this. Once you have heard all offers, you may accept an offer or keep the card.
+Categories: Suit, Color (red, black, or yellow), Number, Low(2-4),Middle(5-7),High(8-10),Face(Page-King),Mega(A,G,Joker).
+Sell (free): You may reveal a card and auction it away to the highest bidder. Bidding starts at 10. High bid pays to you and takes the card. If no player bids, the bank buys the card for 10.
+Bid (free/special): The player may start an auction on one of the center cards. The auction-starter is considered to have bid 0; when the high bid stands, it pays to the bank and takes the card.
+Draw (5): Draw two cards and put them into your hand. Only the best five-card hand will score.
+Wild (10): Declare a number Wild. All cards with that number in any player's hand are wild cards and can be used as any card.
+Joker (15): Take a Joker (not from the deck) and add it to your hand.
+Raise (15): Increase the stakes for the round. This hand counts as two for purposes of determining the winner of the series. If this is taken again, it counts as three, four, etc.
+
+The Showdown: When the showdown has been called and the final round is finished, all players reveal their hands. Taking into account jokers and any cards declared wild for this hand, each player forms the best five-card hand they can, ranked by this scale:
+
+1	Straight Flush (five cards in sequence, all of the same suit)
+2	Five-of-a-Kind (five cards of the same rank)
+3	Four-of-a-Kind (four cards of the same rank, ties broken by the rank of the fifth card)
+4	Flush (five cards of the same suit)
+5	Full House (three cards of the same rank and a pair of another rank)
+6	Straight (five cards in sequence, not all of the same suit)
+7	Three-of-a-Kind (three cards of the same rank, ties broken by the ranks of the fourth and fifth cards)
+8	Two Pairs (two each of two distinct ranks, ties broken by the fifth card)
+9	Pair (two cards of matching rank, ties broken by the remaining three cards)
+10	High Card (ranked by the cards in order from highest to lowest)
+In general, two hands of the same type are compared against each other by highest card, then by second-highest, etc. Five 10s beats five 7s, a Full House of Three Jacks and Two Kings (“Jacks over Kings”) beats one of Three 10s and two Aces (“Tens over Aces”), Four 8s plus a Jack beats Four 8s plus a 7, etc.
+
+Given wilds, there may often be two hands which match perfectly. Break these ties by the printed ranks of the cards, with Jokers ranking lowest (below 2) for this purpose. This final tiebreaker uses only the specific cards; If Anan has four 3s and a God, and Bulian has two 3s, two wild Kings, and a Jack, Anan wins, even though the Kings counted to make the hand and are higher than the 3s that gave Anan his Four-of-a-Kind.
+
+Notes for Earth Poker Players: Because of the six suits and 15 ranks in the Arcturan deck, in Trader’s Poker a Flush beats a Full House and a Straight Flush beats Five-of-a-Kind. Five-of-a-Kind is above Four- as you would expect, and a Full House still beats a Straight. Other rankings will be familiar.
+
