@@ -1,0 +1,858 @@
+
+%%BoundingBox: 0 0 825 1125
+%pure white background
+gsave
+newpath
+0 0 moveto
+0 1125 lineto
+825 1125 lineto
+825 0 lineto
+closepath
+1 1 1 setrgbcolor
+fill
+grestore
+
+%borders
+newpath
+1 1  moveto
+1 1124 lineto
+824 1124 lineto
+824 1 lineto
+closepath
+stroke
+
+gsave
+newpath
+1 0 0 setrgbcolor
+38 38 moveto
+38 1087 lineto
+787 1087 lineto
+787 38 lineto
+closepath
+stroke
+grestore
+
+gsave
+newpath
+1 1 0 setrgbcolor
+75 75 moveto
+75 1050 lineto
+750 1050 lineto
+750 75 lineto
+closepath
+stroke
+grestore
+
+
+
+750 75 translate 90 rotate
+%to move (0,0) in the rotated coordinate system by (+u,+v) 
+%change the above translate by (-v,+u). 
+%origin is currently at the yellow corner at the bottom right of the screen, which is the lowest X, lowest Y corner.
+
+%gsave
+%newpath
+%-1 -1 moveto
+%-1 1 lineto
+%1 1 lineto
+%1 -1 lineto
+%closepath stroke
+%grestore
+
+%gsave
+%/bar 824 def
+%newpath
+%0 0 0 setrgbcolor
+%-1 foo mul 0 moveto
+%bar foo sub bar lineto
+%closepath stroke
+%newpath
+%0 0 1 setrgbcolor
+%bar foo sub bar moveto
+%-1 bar mul foo bar sub lineto
+%closepath stroke
+%grestore
+
+%gsave
+%/Times-Roman findfont
+%90 scalefont
+%setfont
+%newpath
+%-1 foo mul -1 foo mul moveto
+%(75) show
+%grestore
+%
+%gsave
+%/Times-Roman findfont
+%90 scalefont
+%setfont
+%newpath
+%-1 foo mul foo moveto
+%(75) show
+%grestore
+%
+%gsave
+%/Times-Roman findfont
+%90 scalefont
+%setfont
+%newpath
+%foo -1 foo mul moveto
+%(75) show
+%grestore
+%gsave
+%/Times-Roman findfont
+%90 scalefont
+%setfont
+%newpath
+%foo foo moveto
+%(75) show
+%grestore
+
+%score value
+/putscore {
+	%usage: (number) putscore will print number in the top right corner. 
+	%Should *not* be longer than 2 digits as that might bleed off the page
+	/n exch def
+	/fontsize 90 def
+	/Times-Roman findfont
+	/correctx 10 def
+	/correcty 10 def
+	fontsize scalefont
+	setfont
+	newpath
+	correctx correcty moveto
+	n show
+} def
+
+%possibilities: circle, square, hex, cross, X, teardrop, star, diamond, heart, club, spade, shield, triangle, half-circle
+%900 px / 7 ~ 128 (128*7=896)
+%this is no longer the size of the card, but it's still a good size for the icons
+%all shapes will assume that they start at the bottom left corner of the dimension by dimension square
+%in which their shape should appear 
+/dimension 128 def
+
+%not used on cards
+/circle {
+	/radius dimension 6 sqrt div def 
+	gsave
+	dimension 2 div dimension 2 div translate 
+	newpath
+	0 0 radius 45 225 arc %top half
+	0 0 radius 225 405 arc %bottom half
+	closepath
+	gsave
+	1 1 1 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+%not used
+/circletop {
+	/radius dimension 6 sqrt div def 
+	gsave
+	dimension 2 div dimension 2 div translate 
+	newpath
+	0 0 radius 45 225 arc %top half
+	closepath
+	gsave
+	1 1 1 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+%not used
+/circlebot {
+	/radius dimension 6 sqrt div def 
+	gsave
+	dimension 2 div dimension 2 div translate 
+	newpath
+	0 0 radius 225 405 arc %bottom half
+	closepath
+	gsave
+	1 1 1 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+/square {
+	/halfside dimension 3 div def 
+	gsave
+	dimension 2 idiv dimension 2 idiv translate %move to the center
+	newpath
+	halfside halfside moveto
+	halfside halfside neg lineto
+	%breakpoint
+	halfside neg halfside neg lineto
+	halfside neg halfside lineto
+	closepath
+	gsave
+	0.2 1 0.2 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+/squaretop {
+	/halfside dimension 3 div def 
+	gsave
+	dimension 2 div dimension 2 div translate %move to the center
+	newpath
+	halfside neg halfside neg moveto
+	halfside neg halfside lineto
+	halfside halfside lineto
+	closepath
+	gsave
+	0.2 1 0.2 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+/squarebot {
+	/halfside dimension 3 div def 
+	gsave
+	dimension 2 idiv dimension 2 idiv translate %move to the center
+	newpath
+	halfside halfside moveto
+	halfside halfside neg lineto
+	halfside neg halfside neg lineto
+	closepath
+	gsave
+	0.2 1 0.2 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+%hard to split
+/hex {
+	/rad dimension 2 div 5 sub def
+	gsave
+	newpath
+	dimension 2 div dimension 2 div translate
+	rad 0 moveto
+	rad 60 cos mul rad 60 sin mul lineto
+	rad 120 cos mul rad 120 sin mul lineto
+	rad neg 0 lineto
+	rad -120 cos mul rad -120 sin mul lineto	
+	rad -60 cos mul rad -60 sin mul lineto	
+	closepath
+	gsave
+	1 1 1 setrgbcolor
+	fill
+	grestore
+	gsave
+	5 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+/cross {
+	gsave
+	/close dimension 0.05 mul def
+	/edge dimension 0.95 mul def
+	/tenth dimension 10 div def
+	/short tenth 2 mul def
+	/leg tenth 4 mul def
+	newpath
+	%breakpoint
+	leg leg moveto
+	close  leg lineto %bottom of the left arm
+	close  leg short add lineto
+	leg short leg add lineto
+	leg edge lineto %left corner of the top arm
+	leg short add edge lineto
+	%breakpoint
+	leg short add leg short add lineto
+	edge leg short add lineto %top corner of the right arm
+	edge leg lineto
+	leg short add leg lineto
+	leg short add close  lineto %bottom right corner of the cross, on the bottom leg
+	leg close  lineto %bottom left corner of the cross, on the leg
+	closepath
+	gsave
+	0 0 0 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+/crosstop {
+	gsave
+	/close dimension 0.05 mul def
+	/edge dimension 0.95 mul def
+	/tenth dimension 10 div def
+	/short tenth 2 mul def
+	/leg tenth 4 mul def
+	newpath
+	%breakpoint
+	leg leg moveto
+	close  leg lineto %bottom of the left arm
+	close  leg short add lineto
+	leg short leg add lineto
+	leg edge lineto %left corner of the top arm
+	leg short add edge lineto
+	leg short add leg short add lineto
+	closepath
+	gsave
+	0 0 0 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+/crossbot {
+	gsave
+	/close dimension 0.05 mul def
+	/edge dimension 0.95 mul def
+	/tenth dimension 10 div def
+	/short tenth 2 mul def
+	/leg tenth 4 mul def
+	newpath
+	leg short add leg short add moveto
+	edge leg short add lineto %top corner of the right arm
+	edge leg lineto
+	leg short add leg lineto
+	leg short add close  lineto %bottom right corner of the cross, on the bottom leg
+	leg close  lineto %bottom left corner of the cross, on the leg
+	leg leg lineto	
+	closepath
+	gsave
+	0 0 0 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+/ecks {
+	gsave
+	/short dimension 3 sqrt 5 mul div def
+	/midsect dimension 2 div short sub def
+	/half dimension 2 div def
+	newpath
+	short 2 div short 2 div moveto
+	0 short lineto
+	midsect half lineto
+	0 dimension short sub lineto
+	short dimension lineto
+	half dimension midsect sub lineto
+	dimension short sub dimension lineto
+	%breakpoint	
+	dimension short 2 div sub dimension short 2 div sub lineto
+	dimension dimension short sub lineto
+	dimension midsect sub half lineto
+	dimension short lineto
+	dimension short sub 0 lineto
+	half midsect lineto
+	short 0 lineto
+	closepath
+	gsave
+	1 0.5 0 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+/eckstop {
+	gsave
+	/short dimension 3 sqrt 5 mul div def
+	/midsect dimension 2 div short sub def
+	/half dimension 2 div def
+	newpath
+	short 2 div short 2 div moveto
+	0 short lineto
+	midsect half lineto
+	0 dimension short sub lineto
+	short dimension lineto
+	half dimension midsect sub lineto
+	dimension short sub dimension lineto
+	%breakpoint	
+	dimension short 2 div sub dimension short 2 div sub lineto
+	closepath
+	gsave
+	1 0.5 0 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+/ecksbot {
+	gsave
+	/short dimension 3 sqrt 5 mul div def
+	/midsect dimension 2 div short sub def
+	/half dimension 2 div def
+	newpath
+	short 2 div short 2 div moveto
+	%breakpoint	
+	dimension short 2 div sub dimension short 2 div sub lineto
+	dimension dimension short sub lineto
+	dimension midsect sub half lineto
+	dimension short lineto
+	dimension short sub 0 lineto
+	half midsect lineto
+	short 0 lineto
+	closepath
+	gsave
+	1 0.5 0 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+%hard to split, very hard
+%solve y=x, (x,y)=(0.5*cos T+0.5,0.5*sin T+0.25)
+%magic number: T=65.704811
+/halfcirc {
+	gsave
+	/magicnumber 65.704811 def
+	/radius dimension 2 div def
+	newpath
+	0 radius 2 div translate
+	radius 2 div 0 moveto
+	radius 0 radius 0 magicnumber arc
+	%breakpoint
+	radius 0 radius magicnumber 180 arc
+	0 0 lineto
+	closepath
+	gsave
+	1 1 0 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+/halfcirctop {
+	gsave
+	/magicnumber 65.704811 def
+	/radius dimension 2 div def
+	newpath
+	0 radius 2 div translate
+	radius 2 div 0 moveto
+	%breakpoint
+	radius 0 radius magicnumber 180 arc
+	0 0 lineto
+	closepath
+	gsave
+	1 1 0 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+/halfcircbot {
+	gsave
+	/magicnumber 65.704811 def
+	/radius dimension 2 div def
+	newpath
+	0 radius 2 div translate
+	radius 2 div 0 moveto
+	radius 0 radius 0 magicnumber arc
+	%breakpoint
+	closepath
+	gsave
+	1 1 0 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+%not used on cards
+/triangle {
+	gsave
+	/hyp {2 sqrt 3 sqrt 1 sub mul} def
+	/shortleg {15 sin hyp mul dimension mul} def
+	/corner {dimension 0} def
+	/upper {dimension shortleg sub dimension} def
+	/closer {0 shortleg} def
+	newpath
+	corner moveto
+	closer lineto
+	upper lineto
+	closepath
+	gsave
+	1 1 1 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def 
+
+/diamond {
+	gsave
+	/half dimension 2 div def %6
+	/sixth dimension 6 div def %2
+	/diaglow dimension 3 mul 10 div def
+	/diaghi dimension 7 mul 10 div def
+	newpath
+	diaglow diaglow moveto %breakpoint
+	sixth half lineto  %(2,6)
+	half dimension lineto %(6,12)
+	diaghi diaghi lineto %breakpoint
+	dimension sixth sub half lineto %(10,6)
+	half 0 lineto %(6,0)
+	closepath
+	gsave
+	1 0 0 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+/diamondtop {
+	gsave
+	/half dimension 2 div def
+	/sixth dimension 6 div def
+	/diaglow dimension 3 mul 10 div def
+	/diaghi dimension 7 mul 10 div def
+	newpath
+	diaglow diaglow moveto %breakpoint
+	sixth half lineto
+	half dimension lineto
+	diaghi diaghi lineto %breakpoint
+ 	closepath
+	gsave
+	1 0 0 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+/diamondbot {
+	gsave
+	/half dimension 2 div def
+	/sixth dimension 6 div def
+	/diaglow dimension 3 mul 10 div def
+	/diaghi dimension 7 mul 10 div def
+	newpath
+	diaglow diaglow moveto %breakpoint
+	diaghi diaghi lineto %breakpoint
+	dimension sixth sub half lineto
+	half 0 lineto
+	closepath
+	gsave
+	1 0 0 setrgbcolor
+	fill
+	grestore
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	grestore
+} def
+
+%must be an end-product, does not split well
+/star {
+	gsave
+	/diag dimension 1 5 sqrt 1 sub 4 div dup mul sub sqrt div def
+	/side diag 5 sqrt 1 add 2 div div def
+	dimension side sub 2 div 0 translate
+	newpath
+	0 0 moveto
+	diag 36 cos mul diag 36 sin mul lineto
+	side 108 cos mul side 108 sin mul lineto
+	side 0 lineto
+	diag 72 cos mul diag 72 sin mul lineto
+	closepath
+	gsave
+	0.1 setlinewidth
+	stroke
+	grestore
+	gsave
+	0 0 1 setrgbcolor
+	fill
+	grestore
+	grestore		
+} def
+
+/convert {
+	gsave
+	/short dimension 10 div def
+	/halfwidth dimension 20 div def
+	/backby dimension 2 mul 3 div def
+	/outby dimension 3 div def
+	newpath
+	0 0 moveto
+	0 dimension lineto
+	halfwidth dimension lineto
+	halfwidth dimension 2 div halfwidth add lineto	
+	dimension short sub dimension 2 div halfwidth add lineto %this is at the end of the arrow, just before the point
+	
+	dimension backby sub dimension 2 div outby add lineto
+	dimension backby sub short add dimension 2 div outby add short add lineto
+
+	dimension   dimension 2 div lineto %this is the point of the arrow
+
+	dimension backby sub short add dimension 2 div outby sub short sub lineto
+	dimension backby sub dimension 2 div outby sub lineto
+
+	dimension short sub dimension 2 div halfwidth sub lineto %this is at the end of the arrow, just before the point
+	halfwidth dimension 2 div halfwidth sub lineto
+	halfwidth 0 lineto
+	closepath
+	fill
+	grestore
+} def
+
+%%squaretop
+%diamond%bot
+%dimension 0 translate
+%%0 dimension translate
+%diamondtop
+%halfcircbot
+%dimension 0 translate
+%%0 dimension translate
+%halfcirctop
+%squarebot
+%dimension 0 translate
+%%0 dimension translate
+%eckstop
+%crossbot
+%dimension 0 translate
+%%0 dimension translate
+%convert
+%dimension 0 translate
+%%0 dimension translate
+%star
+%dimension 0 translate
+%%0 dimension translate
+%hex
+%dimension 0 translate
+
+%A B C	diamond , halfcirc , square
+% M N	ecks, cross
+% X Y	hex, star
+
+%unused: triangle, circle unwritten: teardrop, heart, club, spade, shield
+
+/placesplit{
+
+	%usage: {squaretop} {circlebot} 1 5 placesplit puts a squaretop/circlebot as the leftmost of 5 symbols (including the arrow)
+	/height 675 dimension sub def
+	/outof exch def %how many total?
+	/which exch def %which one is this? (count from the left)
+	
+	gsave
+	/increment dimension 2 div def
+	/midpoint 562.5 increment sub def
+	%move left to the left edge of thing 1, making space for outof total objects
+	%for every object in the total list, move left by half a symbol-width
+	outof increment mul neg midpoint add height translate
+	
+	%move right to the left edge of thing n, where n is which
+	which 1 sub dimension mul 0 translate
+	
+	%draw the symbol of type symboltype
+	%symboltype
+	exec %this should execute the first symboltype sitting on top of the stack
+	exec %this should execute the other symboltype sitting on top of the stack
+	grestore
+} def
+
+
+/placegood {
+
+	%usage: {square} 1 5 placegood puts a square as the leftmost of 5 symbols (including the arrow)
+	/outof exch def %how many total?
+	/which exch def %which one is this? (count from the left)
+	
+	gsave
+	/height 675 dimension sub def
+	/increment dimension 2 div def
+	/midpoint 562.5 increment sub def
+	%move left to the left edge of thing 1, making space for outof total objects
+	%for every object in the total list, move left by half a symbol-width
+	outof increment mul neg midpoint add 0 translate
+	
+	%move right to the left edge of thing n, where n is which
+	which 1 sub dimension mul height translate
+	
+	%draw the symbol of type symboltype
+	%symboltype
+	exec %this should execute the symboltype sitting on top of the stack
+	grestore
+} def
+
+/ceil {
+	%does ceiling with a >= rather than the strict > that ceiling uses
+	/x exch def
+	x floor 1 add
+} def
+
+/placeup {
+	%usage: {square} 3 8 placeup puts a square at the right edge of the top half of a set of 8 symbols
+	%8 includes the arrow and a single end product, so there are three above, three below, and two in the middle afterward
+	%It's not intended to be used with 'which' > (outof/2)-1 (rounded up); if used that way it will produce bad results
+
+	/outof exch def %how many total?
+	/which exch def %which one is this? (count from the left)
+
+	/newoutof outof 2 div floor 1 add def %ceil((outof)/2)
+	
+	gsave
+	0 -1 dimension mul translate %go up
+
+	which newoutof placegood %place the good as if everything was normal, only higher
+
+	grestore
+} def
+
+/flo {
+	%does floor with a <= rather than the strict < that floor uses
+	/x exch def
+	x ceiling 1 sub
+} def
+
+
+/placedown {
+
+	%usage: {square} 6 8 placedown puts a square at the right edge of the bottom half of a set of 8 symbols
+	%8 includes the arrow and a single end product, so there are three above, three below, and two in the middle afterward
+	%It's not intended to be used with 'which' < (outof/2)-1 (rounded up); if used that way it will produce bad results
+
+	/outof exch def %how many total?
+	/which exch def %which one is this? (count from the left)
+
+	/newoutof outof 2 div ceiling 1 add def %ceil((outof)/2)
+	%need to have an offset so that the leftmost down is treated as which=1
+	%going with the top as the shorter half
+	%so that will have floor(outof-2)/2, using <= rather than <
+	/offset outof 2 sub 2 div floor def
+
+	/newwhich which offset sub def
+
+	gsave
+
+	newwhich newoutof placegood %place the good as if everything was normal
+
+	grestore
+} def
+
+/placemid {
+	%usage: {square} 7 8 placemid places a square second from the right halfway up
+	%this needs to simulate being in a line about half as long, and reduces both which and outof to account for that
+	%4 -> 3, 5 -> 4, 6 -> 4, 7 -> 5, 8 -> 5, 9 -> 6, 10 -> 6
+
+	/outof exch def %how many total?
+	/which exch def %which one is this? (count from the left)
+
+
+	/newoutof outof 2 div ceiling 1 add def %1+ceil((outof)/2)
+	/diff outof newoutof sub def
+	/newwhich which diff sub def
+
+	gsave 
+	0 dimension -2 div translate
+
+	newwhich newoutof placegood
+
+	grestore
+
+} def
+
+%%these are for testing and should not appear on every card
+%{diamond} 1 7 placegood
+%{diamondtop} {halfcircbot} 2 7 placesplit
+%{halfcirctop} {squarebot} 3 7 placesplit
+%{eckstop} {crossbot} 4 7 placesplit
+%{convert} 5 7 placegood
+%{hex} 6 7 placegood
+%{star} 7 7 placegood
+%(10) putscore
+
+%{diamond} 1 8 placeup
+%{diamond} 2 8 placeup
+%{diamond} 3 8 placeup
+%{halfcirc} 4 8 placedown
+%{halfcirc} 5 8 placedown
+%{halfcirc} 6 8 placedown
+%{convert} 7 8 placemid
+%{hex}     8 8 placemid
+
+%{diamond} 1 9 placeup
+%{diamond} 2 9 placeup
+%{diamond} 3 9 placeup
+%{halfcirc} 4 9 placedown
+%{halfcirc} 5 9 placedown
+%{halfcirc} 6 9 placedown
+%{halfcirc} 7 9 placedown
+%{convert} 8 9 placemid
+%{hex}     9 9 placemid
+
+(15) putscore 
+{halfcirc} 1 4 placegood
+{cross} 2 4 placegood
+{convert} 3 4 placegood
+{star} 4 4 placegood
