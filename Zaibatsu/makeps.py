@@ -56,9 +56,9 @@ def lookup(char):
 		return "ecks" 
 	if 'N'==char:
 		return "cross"
-	if 'X'==char or 'U'==char: #'X' is deprecated
+	if 'U'==char:
 		return "hex"
-	if 'Y'==char or 'V'==char: #so is 'Y'
+	if 'V'==char:
 		return "star"
 	if '>'==char:
 		return "convert"
@@ -71,7 +71,6 @@ def lookup(char):
 
 
 i=1
-
 while(True):
 	card = cardlist.readline() #get the next card description
 	if card == "" : #if it's empty, close the file and exit loop
