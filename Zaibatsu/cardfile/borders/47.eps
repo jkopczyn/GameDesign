@@ -1,6 +1,7 @@
+
 %%BoundingBox: 0 0 825 1125
 
-
+%borders?
 newpath
 1 1  moveto
 1 1124 lineto
@@ -31,8 +32,70 @@ closepath
 stroke
 grestore
 
-825 0 translate 90 rotate
 
+
+750 75 translate 90 rotate
+%to move (0,0) in the rotated coordinate system by (+u,+v) 
+%change the above translate by (-v,+u). 
+%origin is currently at the yellow corner at the bottom right of the screen, which is the lowest X, lowest Y corner.
+
+%gsave
+%newpath
+%-1 -1 moveto
+%-1 1 lineto
+%1 1 lineto
+%1 -1 lineto
+%closepath stroke
+%grestore
+
+%gsave
+%/bar 824 def
+%newpath
+%0 0 0 setrgbcolor
+%-1 foo mul 0 moveto
+%bar foo sub bar lineto
+%closepath stroke
+%newpath
+%0 0 1 setrgbcolor
+%bar foo sub bar moveto
+%-1 bar mul foo bar sub lineto
+%closepath stroke
+%grestore
+
+%gsave
+%/Times-Roman findfont
+%90 scalefont
+%setfont
+%newpath
+%-1 foo mul -1 foo mul moveto
+%(75) show
+%grestore
+%
+%gsave
+%/Times-Roman findfont
+%90 scalefont
+%setfont
+%newpath
+%-1 foo mul foo moveto
+%(75) show
+%grestore
+%
+%gsave
+%/Times-Roman findfont
+%90 scalefont
+%setfont
+%newpath
+%foo -1 foo mul moveto
+%(75) show
+%grestore
+%gsave
+%/Times-Roman findfont
+%90 scalefont
+%setfont
+%newpath
+%foo foo moveto
+%(75) show
+%grestore
 
 %score value
 /putscore {
@@ -41,16 +104,14 @@ grestore
 	/n exch def
 	/fontsize 90 def
 	/Times-Roman findfont
-	/correctx 975 fontsize 4 mul 3 div sub 10 sub def
-	/correcty 700 fontsize 4 mul 3 div sub 10 sub def
+	/correctx 10 def
+	/correcty 10 def
 	fontsize scalefont
 	setfont
 	newpath
 	correctx correcty moveto
 	n show
 } def
-
-%(10) putscore
 
 %possibilities: circle, square, hex, cross, X, teardrop, star, diamond, heart, club, spade, shield, triangle, half-circle
 %900 px / 7 ~ 128 (128*7=896)
@@ -485,7 +546,7 @@ grestore
 	half 0 lineto %(6,0)
 	closepath
 	gsave
-	1 0.5 0.5 setrgbcolor
+	1 0 0 setrgbcolor
 	fill
 	grestore
 	gsave
@@ -508,7 +569,7 @@ grestore
 	diaghi diaghi lineto %breakpoint
  	closepath
 	gsave
-	1 0.5 0.5 setrgbcolor
+	1 0 0 setrgbcolor
 	fill
 	grestore
 	gsave
@@ -531,7 +592,7 @@ grestore
 	half 0 lineto
 	closepath
 	gsave
-	1 0.5 0.5 setrgbcolor
+	1 0 0 setrgbcolor
 	fill
 	grestore
 	gsave
@@ -594,8 +655,6 @@ grestore
 	grestore
 } def
 
-75 75 translate
-
 %%squaretop
 %diamond%bot
 %dimension 0 translate
@@ -630,6 +689,7 @@ grestore
 /placesplit{
 
 	%usage: {squaretop} {circlebot} 1 5 placesplit puts a squaretop/circlebot as the leftmost of 5 symbols (including the arrow)
+	/height 675 dimension sub def
 	/outof exch def %how many total?
 	/which exch def %which one is this? (count from the left)
 	
@@ -638,7 +698,7 @@ grestore
 	/midpoint 562.5 increment sub def
 	%move left to the left edge of thing 1, making space for outof total objects
 	%for every object in the total list, move left by half a symbol-width
-	outof increment mul neg midpoint add 0 translate
+	outof increment mul neg midpoint add height translate
 	
 	%move right to the left edge of thing n, where n is which
 	which 1 sub dimension mul 0 translate
@@ -658,6 +718,7 @@ grestore
 	/which exch def %which one is this? (count from the left)
 	
 	gsave
+	/height 675 dimension sub def
 	/increment dimension 2 div def
 	/midpoint 562.5 increment sub def
 	%move left to the left edge of thing 1, making space for outof total objects
@@ -665,7 +726,7 @@ grestore
 	outof increment mul neg midpoint add 0 translate
 	
 	%move right to the left edge of thing n, where n is which
-	which 1 sub dimension mul 0 translate
+	which 1 sub dimension mul height translate
 	
 	%draw the symbol of type symboltype
 	%symboltype
@@ -690,7 +751,7 @@ grestore
 	/newoutof outof 2 div floor 1 add def %ceil((outof)/2)
 	
 	gsave
-	0 dimension translate %go up
+	0 -1 dimension mul translate %go up
 
 	which newoutof placegood %place the good as if everything was normal, only higher
 
@@ -742,7 +803,7 @@ grestore
 	/newwhich which diff sub def
 
 	gsave 
-	0 dimension 2 div translate
+	0 dimension -2 div translate
 
 	newwhich newoutof placegood
 
@@ -758,6 +819,7 @@ grestore
 %{convert} 5 7 placegood
 %{hex} 6 7 placegood
 %{star} 7 7 placegood
+%(10) putscore
 
 %{diamond} 1 8 placeup
 %{diamond} 2 8 placeup
@@ -778,10 +840,7 @@ grestore
 %{convert} 8 9 placemid
 %{hex}     9 9 placemid
 
-
-%(10) putscore
-
-(2) putscore 
+(6) putscore 
 {halfcirc} 1 4 placegood
 {square} 2 4 placegood
 {convert} 3 4 placegood
