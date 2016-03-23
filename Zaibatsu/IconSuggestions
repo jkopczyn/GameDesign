@@ -1,7 +1,7 @@
 A/triangle:	microchips
 B/halfcirc:	data
 C/square  :	biotech/chemicals
-M/x	  :	computer
+M/x       :	computer
 N/cross   :	genetics
 U/hex     :	satellite/radar dish/space
 V/star    :	medicine/injection
@@ -9,7 +9,7 @@ V/star    :	medicine/injection
 A/triangle:	microchips
 B/halfcirc:	people
 C/square  :	genetics
-M/x	  :	research
+M/x	      :	research
 N/cross   :	injections
 U/hex     :	weaponry
 V/star    :	cloning
@@ -17,7 +17,7 @@ V/star    :	cloning
 A/triangle:	microchips
 B/halfcirc:	data
 C/square  :	chemicals
-M/x	  :	computer
+M/x	      :	computer
 N/cross   :	DNA symbol
 U/hex     :	satellite/space
 V/star    :	cyborg/bionic arm/clone
@@ -26,7 +26,7 @@ V/star    :	cyborg/bionic arm/clone
 A/triangle:	microchips
 B/halfcirc:	data
 C/square  :	chemicals
-M/x	  :	computer
+M/x	      :	computer
 N/cross   :	DNA symbol
 U/hex     :	satellite/space
 V/star    :	GMO

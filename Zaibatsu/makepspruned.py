@@ -2,8 +2,8 @@
 import shutil
 import os
 
-outpath = "./cardfile/rotate/"
-basepath = "rotatedcardsbase.eps"
+outpath = "./cardfile/pruned/"
+basepath = "cardsbase.eps"
 inpath = "prunedcardlist.txt"
 base = open(basepath) #the template
 template = base.read()
@@ -44,7 +44,7 @@ def process(spec):
 #A B C  diamond , halfcirc , square
 
 # M N   ecks, cross
-# X Y   hex, star
+# U V   hex, star
 def lookup(char):
 	if 'A'==char:
 		return "diamond"

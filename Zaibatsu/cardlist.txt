@@ -1,48 +1,48 @@
-> A/B A/B 1
-> A/C A/C 1
-> B B B 1
-> B B B 1
-> A/C A/C 1
-> C C C 1
-> A/B A/B 1
-> A A A 1
-> B B B 1
-> C C C 1
-> A/B A/B 1
-> A/C A/C 1
-> C C C 1
-> B/C B/C 1
-> B/C B/C 1
-> B/C B/C 1
-> B B B 1
-> C C C 1
-> A A A 1
-> A A A 1
-> A A A 1
-B B B > M/N 2
-B B B C C C > Y 5
-Y Y ^ 10
-B N > Y 5
-X Y ^ 10
-A M X ^ 10
-X X ^ 10
-B N > Y 5
-A M > X 5
-A A > M 2
-B C > N 2
-A A A B B B > X 5
-B B B > M/N 2
-B M > X 5
-A M > X 5
-A A > M 2
-C C > N 2
-C C > N 2
-A B > M 2
-A A > M 2
-A B > M 2
-C N > Y 5
-B M > X 5
-C N > Y 5
-C C > N 2
-B C > N 2
-C N Y ^ 10
+> A/B A/B 3
+> A/C A/C 3
+> B B B 3
+> B B B 3
+> A/C A/C 3
+> C C C 3
+> A/B A/B 3
+> A A A 3
+> B B B 3
+> C C C 3
+> A/B A/B 3
+> A/C A/C 3
+> C C C 3
+> B/C B/C 3
+> B/C B/C 3
+> B/C B/C 3
+> B B B 3
+> C C C 3
+> A A A 3
+> A A A 3
+> A A A 3
+B B B > M/N 6
+B B B C C C > V 15
+V V ^ 30
+B N > V 15
+U V ^ 30
+A M U ^ 30
+U U ^ 30
+B N > V 15
+A M > U 15
+A A > M 6
+B C > N 6
+A A A B B B > U 15
+B B B > M/N 6
+B M > U 15
+A M > U 15
+A A > M 6
+C C > N 6
+C C > N 6
+A B > M 6
+A A > M 6
+A B > M 6
+C N > V 15
+B M > U 15
+C N > V 15
+C C > N 6
+B C > N 6
+C N V ^ 30
