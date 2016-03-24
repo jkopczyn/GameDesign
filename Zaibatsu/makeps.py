@@ -2,16 +2,6 @@
 import shutil
 import os
 
-outpath = "./cardfile/"
-basepath = "cardsbase.eps"
-inpath = "cardlist.txt"
-base = open(basepath) #the template
-template = base.read()
-base.close() #there is nothing more to see
-cardlist = open(inpath)
-
-
-
 def process(spec):
 	accum = "\n"
 	symbols = spec.split()
@@ -42,7 +32,6 @@ def process(spec):
 	#return spec+"\n"
 
 #A B C  diamond , halfcirc , square
-
 # M N   ecks, cross
 # U V   hex, star
 def lookup(char):
@@ -69,18 +58,42 @@ def lookup(char):
 	return 'you broke it you fucker'
 
 
+def template(templatedir, bordered=False):
+  template = ""
+  curr = open(templatedir+'header.eps', 'r')
+  template += curr.read()
+  curr.close()
+  if bordered:
+    curr = open(templatedir+'borders.eps', 'r')
+    template += curr.read()
+    curr.close()
+  curr = open(templatedir+'helper_functions.eps', 'r')
+  template += curr.read()
+  curr.close()
+  curr = open(templatedir+'coordinate_system.eps', 'r')
+  template += curr.read()
+  curr.close()
+  return template
 
-i=1
-while(True):
-	card = cardlist.readline() #get the next card description
-	if card == "" : #if it's empty, close the file and exit loop
-		cardlist.close()
-		break
-	psout = process(card); #turn that description into PS
-	cardprint = open(outpath+str(i)+'.eps','w') #the file for the card
-	cardprint.write(template) #copy the template into the file
-	cardprint.write(psout) #create the specific card PS 
-	cardprint.close() #and it's done
-	i+=1 #so that each file is different
+def main(outpath, inpath, templatedir, bordered=False):
+  templatestring = template(templatedir, bordered)
+  cardlist = open(inpath)
+  i=1
+  while(True):
+  	card = cardlist.readline() #get the next card description
+  	if card == "" : #if it's empty, close the file and exit loop
+  		cardlist.close()
+  		break
+  	psout = process(card); #turn that description into PS
+  	cardprint = open(outpath+str(i)+'.eps','w') #the file for the card
+  	cardprint.write(templatestring) #copy the template into the file
+  	cardprint.write(psout) #create the specific card PS 
+  	cardprint.close() #and it's done
+  	i+=1 #so that each file is different
 
-
+if __name__ == '__main__':
+  #run directly
+  outpath     = "./cardfile/"
+  templatedir = "./eps_partials/"
+  inpath      = "cardlist.txt"
+  main(outpath, inpath, templatedir)
