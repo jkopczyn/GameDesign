@@ -12,6 +12,8 @@ closepath
 fill
 grestore
 
+
+
 %borders
 newpath
 1 1  moveto
@@ -43,71 +45,6 @@ closepath
 stroke
 grestore
 
-
-
-750 75 translate 90 rotate
-%to move (0,0) in the rotated coordinate system by (+u,+v) 
-%change the above translate by (-v,+u). 
-%origin is currently at the yellow corner at the bottom right of the screen, which is the lowest X, lowest Y corner.
-
-%gsave
-%newpath
-%-1 -1 moveto
-%-1 1 lineto
-%1 1 lineto
-%1 -1 lineto
-%closepath stroke
-%grestore
-
-%gsave
-%/bar 824 def
-%newpath
-%0 0 0 setrgbcolor
-%-1 foo mul 0 moveto
-%bar foo sub bar lineto
-%closepath stroke
-%newpath
-%0 0 1 setrgbcolor
-%bar foo sub bar moveto
-%-1 bar mul foo bar sub lineto
-%closepath stroke
-%grestore
-
-%gsave
-%/Times-Roman findfont
-%90 scalefont
-%setfont
-%newpath
-%-1 foo mul -1 foo mul moveto
-%(75) show
-%grestore
-%
-%gsave
-%/Times-Roman findfont
-%90 scalefont
-%setfont
-%newpath
-%-1 foo mul foo moveto
-%(75) show
-%grestore
-%
-%gsave
-%/Times-Roman findfont
-%90 scalefont
-%setfont
-%newpath
-%foo -1 foo mul moveto
-%(75) show
-%grestore
-%gsave
-%/Times-Roman findfont
-%90 scalefont
-%setfont
-%newpath
-%foo foo moveto
-%(75) show
-%grestore
-
 %score value
 /putscore {
 	%usage: (number) putscore will print number in the top right corner. 
@@ -125,8 +62,6 @@ grestore
 } def
 
 %possibilities: circle, square, hex, cross, X, teardrop, star, diamond, heart, club, spade, shield, triangle, half-circle
-%900 px / 7 ~ 128 (128*7=896)
-%this is no longer the size of the card, but it's still a good size for the icons
 %all shapes will assume that they start at the bottom left corner of the dimension by dimension square
 %in which their shape should appear 
 /dimension 128 def
@@ -666,26 +601,9 @@ grestore
 	grestore
 } def
 
-%%squaretop
-%diamond%bot
-%dimension 0 translate
-%%0 dimension translate
-%diamondtop
-%halfcircbot
-%dimension 0 translate
-%%0 dimension translate
+%%testing for shapes basics
 %halfcirctop
 %squarebot
-%dimension 0 translate
-%%0 dimension translate
-%eckstop
-%crossbot
-%dimension 0 translate
-%%0 dimension translate
-%convert
-%dimension 0 translate
-%%0 dimension translate
-%star
 %dimension 0 translate
 %%0 dimension translate
 %hex
@@ -850,6 +768,21 @@ grestore
 %{halfcirc} 7 9 placedown
 %{convert} 8 9 placemid
 %{hex}     9 9 placemid
+
+750 75 translate 90 rotate
+%to move (0,0) in the rotated coordinate system by (+u,+v) 
+%change the above translate by (-v,+u). 
+%origin is currently at the yellow corner at the bottom right of the screen, which is the lowest X, lowest Y corner.
+
+%test location of origin
+%gsave
+%newpath
+%-1 -1 moveto
+%-1 1 lineto
+%1 1 lineto
+%1 -1 lineto
+%closepath stroke
+%grestore
 
 (3) putscore 
 {convert} 1 4 placegood
