@@ -1,0 +1,16 @@
+L 3 G V 1 B _ 0 W
+L 0 G V 2 W _ 0 B
+L 0 W V 2 B _ 0 G
+L 0 G V 2 B _ 0 W
+L 3 B V 1 W _ 0 G
+L 0 B V 2 W _ 0 G
+L 3 B V 1 G _ 0 W
+L 0 B V 2 G _ 0 W
+L 3 W V 1 G _ 0 B
+L 3 G V 1 W _ 0 B
+L 0 W V 2 G _ 0 B
+L 3 W V 1 B _ 0 G
+C 0 W V 2 B V 3 G
+C 0 B V 2 G V 3 W
+C 0 G V 2 B V 3 W
+C 0 G V 2 W V 3 B

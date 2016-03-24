@@ -1,0 +1,220 @@
+
+%%BoundingBox: 0 0 825 1125
+
+%newpath
+%1 1  moveto
+%1 1124 lineto
+%824 1124 lineto
+%824 1 lineto
+%closepath
+%stroke
+%
+%gsave
+%newpath
+%1 0 0 setrgbcolor
+%38 38 moveto
+%38 1087 lineto
+%787 1087 lineto
+%787 38 lineto
+%closepath
+%stroke
+%grestore
+%
+%gsave
+%newpath
+%1 1 0 setrgbcolor
+%75 75 moveto
+%75 1050 lineto
+%750 1050 lineto
+%750 75 lineto
+%closepath
+%stroke
+%grestore
+
+/black {0 setgray fill} def
+
+/white {gsave 1 setgray fill grestore lnw setlinewidth stroke} def
+
+/gray {gsave 0.5 setgray fill grestore lnw setlinewidth stroke} def
+
+/colors {
+	/param exch def
+	param 0 eq {black} if
+	param 1 eq {gray} if
+	param 2 eq {white} if
+	%stroke not necessary
+} def
+
+/horizflip {width 0 translate -1 1 scale} def
+
+/vertflip {0 height translate 1 -1 scale} def
+
+/orient {
+	/n exch def
+	n 1 eq n 2 eq or {vertflip} if
+	n 2 eq n 3 eq or {horizflip} if
+} def
+
+/height 1050 def
+/width 750 def
+/offset 300 def
+/halfline 20 def
+/xcontrolpoint 300 def
+/ycontrolpoint 300 def
+/lnw 4 def
+
+38 38 translate
+
+/smallcurve {
+/color exch def
+/orientation exch def
+gsave
+orientation orient
+%%small curve to the left
+newpath
+width 2 div 0 moveto
+width 2 div halfline sub    0 lineto
+width 2 div halfline sub    ycontrolpoint halfline sub
+	xcontrolpoint halfline sub    offset halfline sub
+		0    offset halfline sub
+		curveto
+0    offset halfline add lineto
+xcontrolpoint halfline add   offset halfline add
+	width 2 div halfline add    ycontrolpoint halfline add
+		width 2 div halfline add    0
+		curveto
+closepath
+color colors
+grestore
+} def
+
+
+/tallcurve {
+/color exch def
+/orientation exch def
+gsave
+orientation orient
+%tall curve to the left
+newpath
+width 2 div    0 moveto
+width 2 div halfline sub    0 lineto
+width 2 div halfline sub    ycontrolpoint 2 mul halfline sub
+	xcontrolpoint halfline sub    height offset sub halfline sub
+		0    height offset sub halfline sub
+		curveto
+0    height offset sub halfline add lineto
+xcontrolpoint halfline add    height offset sub halfline add
+	width 2 div halfline add    ycontrolpoint 2 mul halfline add
+		width 2 div halfline add    0
+		curveto
+closepath
+color colors
+grestore
+} def
+
+
+/diag {
+/color exch def
+/orientation exch def
+gsave
+orientation orient
+%diagonal from UR to BL
+newpath
+width    height offset sub moveto
+width    height offset sub halfline add lineto
+width xcontrolpoint 0.9 mul sub    height offset sub halfline add
+	xcontrolpoint 0.9 mul    offset halfline add
+		0    offset halfline add
+		curveto
+0    offset halfline sub lineto
+xcontrolpoint 0.9 mul    offset halfline sub
+	width xcontrolpoint 0.9 mul sub    height offset sub halfline sub
+		width    height offset sub halfline sub
+		curveto
+
+closepath
+color colors
+grestore
+} def
+
+
+/semicirc {
+/color exch def
+/orientation exch def
+gsave
+orientation orient
+%left-side curve
+newpath
+0    height offset sub moveto
+0    height offset sub halfline add lineto
+xcontrolpoint 1.2 mul halfline add   height offset sub halfline add
+	xcontrolpoint 1.2 mul  halfline add    offset halfline sub
+		0    offset halfline sub
+		curveto
+0    offset halfline add lineto
+xcontrolpoint  1.2 mul halfline sub    offset halfline add
+	xcontrolpoint 1.2 mul  halfline sub    height offset sub halfline sub
+		0    height offset sub halfline sub
+		curveto
+
+closepath
+color colors
+grestore
+} def
+
+
+/horizline {
+/color exch def
+/orientation exch def
+gsave
+orientation orient
+%low horizontal line
+newpath
+width    offset halfline add moveto
+0    offset halfline add lineto
+0    offset halfline sub lineto
+width offset halfline sub lineto
+closepath
+color colors
+grestore
+} def
+
+/vertline {
+/color exch def
+/orientation exch def
+gsave
+orientation orient
+%straight down the middle
+newpath
+width 2 div    height moveto
+width 2 div halfline add    height lineto
+width 2 div halfline add    0 lineto
+width 2 div halfline sub    0 lineto
+width 2 div halfline sub    height lineto
+closepath
+color colors
+grestore
+} def
+
+%gsave
+%0 orient
+%%straight down the middle
+%newpath
+%width 2 div    height moveto
+%width 2 div halfline add    height lineto
+%width 2 div halfline add    0 lineto
+%width 2 div halfline sub    0 lineto
+%width 2 div halfline sub    height lineto
+%closepath
+%0 colors
+%grestore
+
+%2 0 vertline
+%0 0 smallcurve 
+%3 1 tallcurve
+%1 2 diag
+ 
+
+gsave 3 2 smallcurve grestore 
+gsave 2 0 smallcurve grestore 
+gsave 0 1 semicirc grestore 

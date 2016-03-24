@@ -1,0 +1,80 @@
+City of Angles game/Lucid Building/Bourbon Planning/Turbine Planning/Blurred-In Planning
+
+tiles get placed onto the board, displacing existing ones toward the edges. each tile has some paths, potentially colored; each time things shift, each players scores for the paths formed.
+
+For 18-card game, colored paths (some are two colors half and half). Or, wait, probably just a two-player game; black and white.
+
+
+/height {} def
+/width {} def
+/offset {} def
+/halfline {} def
+/xcontrolpoint {} def
+/ycontrolpoint {} def
+
+%small curve to the left
+width 2 div    height moveto
+width 2 div halfline sub    height lineto
+width 2 div halfline sub    height ycontrolpoint sub
+	xcontrolpoint    height offset sub halfline add
+		0    height offset sub halfline add
+		curveto
+0    height offset sub halfline sub lineto
+xcontrolpoint    height offset sub halfline sub
+	width 2 div halfline add    height ycontrolpoint sub
+		width 2 div halfline add
+		curveto
+closepath %here be fill or linewidth N stroke
+
+%tall curve to the left
+width 2 div    height moveto
+width 2 div halfline sub    height lineto
+width 2 div halfline sub    height ycontrolpoint sub
+	xcontrolpoint    offset halfline add
+		0    offset halfline add
+		curveto
+0    offset halfline sub lineto
+xcontrolpoint    offset halfline sub
+	width 2 div halfline add    height ycontrolpoint sub
+		width 2 div halfline add
+		curveto
+closepath %here be fill or linewidth N stroke
+
+
+%diagonal from UR to BL
+width    height offset sub moveto
+width    height offset sub halfline add lineto
+width xcontrolpoint sub    height offset sub halfline add
+	xcontrolpoint    offset halfline add
+		0    offset halfline add
+		curveto
+0    offset halfline sub lineto
+xcontrolpoint    offset halfline sub
+	width xcontrolpoint sub    height offset sub halfline sub
+		width    height offset sub halfline sub
+		curveto
+closepath %here be fill or linewidth N stroke
+
+
+
+%left-side curve
+0    height offset sub moveto
+0    height offset sub halfline add lineto
+xcontrolpoint    height offset sub halfline add
+	xcontrolpoint    offset halfline add
+		0    offset halfline add
+		curveto
+0    offset halfline sub lineto
+xcontrolpoint    offset halfline sub
+	xcontrolpoint    height offset sub halfline sub
+		0    height offset sub halfline sub
+		curveto
+closepath %here be fill or linewidth N stroke
+
+%straight down the middle
+width 2 div    height moveto
+width 2 div halfline add    height lineto
+width 2 div halfline add    0 lineto
+width 2 div halfline sub    0 lineto
+width 2 div halfline sub    height lineto
+closepath %here be fill or linewidth N stroke
