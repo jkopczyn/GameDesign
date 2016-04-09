@@ -17,11 +17,15 @@ grestore
 /putscore {
 	%usage: (number) putscore will print number in the top right corner. 
 	%Should *not* be longer than 2 digits as that might bleed off the page
-	/n exch def
+	%if I want lower left corner, x and y should be 10 instead
+  %the inner borders are x = 75, 1050 and y = 75, 750
+
+  /n exch def
 	/fontsize 90 def
 	/Times-Roman findfont
-	/correctx 10 def
-	/correcty 30 def
+	
+  /correctx 1040 fontsize 2   mul sub def
+	/correcty 740  fontsize 1.5 mul sub def
 	fontsize scalefont
 	setfont
 	newpath

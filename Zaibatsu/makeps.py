@@ -86,11 +86,11 @@ def main(outpath, inpath, templatedir, bordered=False):
       cardlist.close()
       break
     psout = process(card); #turn that description into PS
-    cardprint = open(outpath+'temp.eps','w')
+    cardprint = open('temp.eps','w')
     cardprint.write(templatestring) #copy the template into the file
     cardprint.write(psout) #create the specific card PS 
     cardprint.close() #and it's done
-    call(["eps2eps", outpath+"temp.eps", outpath+str(i)+'.eps'])
+    call(["eps2eps", "temp.eps", outpath+str(i)+'.eps'])
     #the file for the card
     i+=1 #so that each file is different
 
