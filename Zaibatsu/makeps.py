@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import shutil
 import os
+from subprocess import call
 
 def process(spec):
 	accum = "\n"
@@ -80,16 +81,18 @@ def main(outpath, inpath, templatedir, bordered=False):
   cardlist = open(inpath)
   i=1
   while(True):
-  	card = cardlist.readline() #get the next card description
-  	if card == "" : #if it's empty, close the file and exit loop
-  		cardlist.close()
-  		break
-  	psout = process(card); #turn that description into PS
-  	cardprint = open(outpath+str(i)+'.eps','w') #the file for the card
-  	cardprint.write(templatestring) #copy the template into the file
-  	cardprint.write(psout) #create the specific card PS 
-  	cardprint.close() #and it's done
-  	i+=1 #so that each file is different
+    card = cardlist.readline() #get the next card description
+    if card == "" : #if it's empty, close the file and exit loop
+      cardlist.close()
+      break
+    psout = process(card); #turn that description into PS
+    cardprint = open(outpath+'temp.eps','w')
+    cardprint.write(templatestring) #copy the template into the file
+    cardprint.write(psout) #create the specific card PS 
+    cardprint.close() #and it's done
+    call(["eps2eps", outpath+"temp.eps", outpath+str(i)+'.eps'])
+    #the file for the card
+    i+=1 #so that each file is different
 
 if __name__ == '__main__':
   #run directly

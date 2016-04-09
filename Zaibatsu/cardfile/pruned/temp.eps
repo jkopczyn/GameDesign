@@ -1,3 +1,18 @@
+
+%%BoundingBox: 0 0 825 1125
+%pure white background
+gsave
+newpath
+0 0 moveto
+0 1125 lineto
+825 1125 lineto
+825 0 lineto
+closepath
+1 1 1 setrgbcolor
+fill
+grestore
+
+
 %score value
 /putscore {
 	%usage: (number) putscore will print number in the top right corner. 
@@ -721,3 +736,23 @@
 %{halfcirc} 7 9 placedown
 %{convert} 8 9 placemid
 %{hex}     9 9 placemid
+
+750 75 translate 90 rotate
+%to move (0,0) in the rotated coordinate system by (+u,+v) 
+%change the above translate by (-v,+u). 
+%origin is currently at the yellow corner at the bottom right of the screen, which is the lowest X, lowest Y corner.
+
+%test location of origin
+%gsave
+%newpath
+%-1 -1 moveto
+%-1 1 lineto
+%1 1 lineto
+%1 -1 lineto
+%closepath stroke
+%grestore
+
+(30) putscore 
+{hex} 1 3 placegood
+{hex} 2 3 placegood
+{convert} 3 3 placegood
