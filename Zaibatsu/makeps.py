@@ -59,13 +59,17 @@ def lookup(char):
 	return 'you broke it you fucker'
 
 
-def template(templatedir, bordered=False):
+def template(templatedir, bordered=False, zones=False):
   template = ""
   curr = open(templatedir+'header.eps', 'r')
   template += curr.read()
   curr.close()
   if bordered:
     curr = open(templatedir+'borders.eps', 'r')
+    template += curr.read()
+    curr.close()
+  if zones:
+    curr = open(templatedir+'zones.eps', 'r')
     template += curr.read()
     curr.close()
   curr = open(templatedir+'helper_functions.eps', 'r')
@@ -76,8 +80,8 @@ def template(templatedir, bordered=False):
   curr.close()
   return template
 
-def main(outpath, inpath, templatedir, bordered=False):
-  templatestring = template(templatedir, bordered)
+def main(outpath, inpath, templatedir, bordered=False, zones=False):
+  templatestring = template(templatedir, bordered, zones)
   cardlist = open(inpath)
   i=1
   while(True):
