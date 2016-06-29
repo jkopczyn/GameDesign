@@ -78,6 +78,10 @@ def template(templatedir, bordered=False, zones=False):
   curr = open(templatedir+'coordinate_system.eps', 'r')
   template += curr.read()
   curr.close()
+  if zones:
+    curr = open(templatedir+'zonesconvert.eps', 'r')
+    template += curr.read()
+    curr.close()
   return template
 
 def main(outpath, inpath, templatedir, bordered=False, zones=False):
