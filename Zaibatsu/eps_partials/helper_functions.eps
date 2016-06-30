@@ -18,6 +18,20 @@
     n show
 } def
 
+/putname {
+    /name exch def
+    /fontsize 45 def
+    /Times-Roman findfont
+
+    /correctx 125 def
+    /correcty 375 def
+    fontsize scalefont
+    setfont
+    newpath
+    correctx correcty moveto
+    name show
+} def
+
 %possibilities: circle, square, hex, cross, X, teardrop, star, diamond, heart, club, spade, shield, triangle, half-circle
 %all shapes will assume that they start at the bottom left corner of the dimension by dimension square
 %in which their shape should appear 
