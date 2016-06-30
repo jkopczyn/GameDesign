@@ -1,4 +1,4 @@
-> A/B A/B 3
+> A/B A/B 3 Helios Amalgamated Mining
 > A/C A/C 3
 > B B B 3
 > B B B 3
