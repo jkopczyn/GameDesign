@@ -1,24 +1,24 @@
-> A/B A/B 3 Helios Amalgamated Mining
-> A/C A/C 3
-> B B B 3
-> B B B 3
-> A/C A/C 3
-> C C C 3
-> A/B A/B 3
+> A/B A/B 3 Helios Excavation
+> A/B A/B 3 Appalachia Coal and Ore
+> A/B A/B 3 Mountain Bones Mining
+> A/C A/C 3 Solstice Farm and Mine
+> A/C A/C 3 Valley Farm and Ore
+> A/C A/C 3 Eden's Builders, Inc.
+> B/C B/C 3 Rand Biofuel
+> B/C B/C 3 Fuji Fuel and Fertilizer
+> B/C B/C 3 CornCo
+> A A A 3 Virginia Iron
+> A A A 3 MiddleCo Rare Earth
+> A A A 3 
 > A A A 3
-> B B B 3
+> B B B 3 Araco Oil
+> B B B 3 Dakota Gas
+> B B B 3 Edmonton Extraction
+> B B B 3 Petrocorp
 > C C C 3
-> A/B A/B 3
-> A/C A/C 3
 > C C C 3
-> B/C B/C 3
-> B/C B/C 3
-> B/C B/C 3
-> B B B 3
 > C C C 3
-> A A A 3
-> A A A 3
-> A A A 3
+> C C C 3
 B B B > M/N 6
 B B B C C C > V 15
 V V ^ 30

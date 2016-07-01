@@ -37,7 +37,7 @@ def parameterize_line(line):
     data = {'symbols':[]}
     for t in tokens:
         try:
-            data['points'] = int(t)
+            data['points'] = str(int(t))
             break
         except ValueError:
             data['symbols'].append(t)
@@ -116,9 +116,8 @@ def main(outpath, inpath, templatedir, bordered=False, zones=False):
 	i+=1 #so that each file is different
 
 if __name__ == '__main__':
-    print parameterize_line("> A/B A/B 3 Helios Amalgamated Mining")
     #run directly
     outpath     = "./cardfile/"
     templatedir = "./eps_partials/"
     inpath      = "cardlist.txt"
-    #main(outpath, inpath, templatedir)
+    main(outpath, inpath, templatedir)
