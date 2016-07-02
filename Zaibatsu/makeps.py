@@ -53,25 +53,6 @@ def lookup(char):
         'N': "cross", 'U': "hex", 'V': "star", '>': "convert",'^': "convert",
     }
     return map_dict.get(char, 'you broke it')
-    #if 'A'==char:
-    #    return "diamond"
-    #if 'B'==char:
-    #    return "halfcirc"
-    #if 'C'==char:
-    #    return "square"
-    #if 'M'==char:
-    #    return "ecks"
-    #if 'N'==char:
-    #    return "cross"
-    #if 'U'==char:
-    #    return "hex"
-    #if 'V'==char:
-    #    return "star"
-    #if '>'==char:
-    #    return "convert"
-    #if '^'==char:
-    #    return "convert"
-    #return 'you broke it you fucker'
 
 def append_file(before, directory, target_file):
     with open(directory+target_file, 'r') as f:
