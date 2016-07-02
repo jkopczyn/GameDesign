@@ -19,30 +19,30 @@
 > C C C 3
 > C C C 3
 > C C C 3
-B B B > M/N 6
-B B B C C C > V 15
-V V ^ 30
-B N > V 15
-U V ^ 30
-A M U ^ 30
-U U ^ 30
-B N > V 15
-A M > U 15
+A A > M 6 Detroit Steel
 A A > M 6
-B C > N 6
-A A A B B B > U 15
-B B B > M/N 6
-B M > U 15
-A M > U 15
 A A > M 6
-C C > N 6
-C C > N 6
+A B > M 6 Fujiyama Forges
 A B > M 6
-A A > M 6
-A B > M 6
-C N > V 15
-B M > U 15
-C N > V 15
-C C > N 6
+B C > N 6 JIT Staffing
 B C > N 6
-C N V ^ 30
+C C > N 6 Worldwide Labor, Inc.
+C C > N 6
+C C > N 6
+B B B > M/N 6 Commodity Solutions
+B B B > M/N 6
+A A A B B B > U 15 Onion Microcontrollers
+B B B C C C > V 15 Hanwei Biological
+A M > U 15 Artra Personal Computing
+A M > U 15
+B M > U 15 XYZ Mainframes
+B M > U 15
+B N > V 15 The Management Corporation
+B N > V 15
+C N > V 15 Broadsheet Marketing
+C N > V 15
+A M U ^ 30 Cityscape Construction
+C N V ^ 30 Excelsior Training
+U U ^ 30 21st Century Defense
+U V ^ 30 Great Wall Datacenters
+V V ^ 30 Influence Street
