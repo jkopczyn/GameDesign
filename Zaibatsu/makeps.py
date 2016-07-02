@@ -3,12 +3,11 @@ import shutil
 import os
 from subprocess import call
 
-def process(spec):
+def process(params):
     accum = "\n"
-    data_dict = parameterize_line(spec)
-    symbols = data_dict['symbols']
-    name = data_dict['name']
-    points = data_dict['points']
+    symbols = params['symbols']
+    name = params['name']
+    points = params['points']
     accum+="("+points+") putscore \n"
     outof = len(symbols) #symbols will be placed as the 1st 'out of' n
     if outof <= 7:
@@ -49,71 +48,78 @@ def parameterize_line(line):
 # M N   ecks, cross
 # U V   hex, star
 def lookup(char):
-    if 'A'==char:
-        return "diamond"
-    if 'B'==char:
-        return "halfcirc"
-    if 'C'==char:
-        return "square"
-    if 'M'==char:
-        return "ecks"
-    if 'N'==char:
-        return "cross"
-    if 'U'==char:
-        return "hex"
-    if 'V'==char:
-        return "star"
-    if '>'==char:
-        return "convert"
-    if '^'==char:
-        return "convert"
-    #return "error, ^ should have been caught earlier"
-    #else
-    return 'you broke it you fucker'
+    map_dict = {
+        'A': "diamond", 'B': "halfcirc", 'C': "square", 'M': "ecks",
+        'N': "cross", 'U': "hex", 'V': "star", '>': "convert",'^': "convert",
+    }
+    return map_dict.get(char, 'you broke it')
+    #if 'A'==char:
+    #    return "diamond"
+    #if 'B'==char:
+    #    return "halfcirc"
+    #if 'C'==char:
+    #    return "square"
+    #if 'M'==char:
+    #    return "ecks"
+    #if 'N'==char:
+    #    return "cross"
+    #if 'U'==char:
+    #    return "hex"
+    #if 'V'==char:
+    #    return "star"
+    #if '>'==char:
+    #    return "convert"
+    #if '^'==char:
+    #    return "convert"
+    #return 'you broke it you fucker'
 
+def append_file(before, directory, target_file):
+    with open(directory+target_file, 'r') as f:
+        after = before + f.read()
+    return after
 
 def template(templatedir, bordered=False, zones=False):
-    template = ""
-    curr = open(templatedir+'header.eps', 'r')
-    template += curr.read()
-    curr.close()
+    template = append_file("", templatedir, 'header.eps')
     if bordered:
-        curr = open(templatedir+'borders.eps', 'r')
-        template += curr.read()
-        curr.close()
+        template = append_file(template, templatedir, 'borders.eps')
     if zones:
-        curr = open(templatedir+'zones.eps', 'r')
-        template += curr.read()
-        curr.close()
-    curr = open(templatedir+'helper_functions.eps', 'r')
-    template += curr.read()
-    curr.close()
-    curr = open(templatedir+'coordinate_system.eps', 'r')
-    template += curr.read()
-    curr.close()
+        template = append_file(template, templatedir, 'zones.eps')
+    template = append_file(template, templatedir, 'helper_functions.eps')
+    template = append_file(template, templatedir, 'coordinate_system.eps')
     if zones:
-        curr = open(templatedir+'zonesconvert.eps', 'r')
-        template += curr.read()
-        curr.close()
+        template = append_file(template, templatedir, 'zonesconvert.eps')
     return template
 
 def main(outpath, inpath, templatedir, bordered=False, zones=False):
     templatestring = template(templatedir, bordered, zones)
     cardlist = open(inpath)
-    i=1
+
+    temp_file = 'temp.eps'
+    blank_name_counter=[1]
     while(True):
         card = cardlist.readline() #get the next card description
         if card == "" : #if it's empty, close the file and exit loop
             cardlist.close()
             break
-	psout = process(card); #turn that description into PS
-	cardprint = open('temp.eps','w')
-	cardprint.write(templatestring) #copy the template into the file
-	cardprint.write(psout) #create the specific card PS
-	cardprint.close() #and it's done
-	call(["eps2eps", "temp.eps", outpath+str(i)+'.eps'])
-	#the file for the card
-	i+=1 #so that each file is different
+        params = parameterize_line(card)
+        psout = process(params); #turn that description into PS
+        create_simple_eps(temp_file, templatestring, psout)
+        call(["eps2eps", temp_file, filename(outpath, params['name'], blank_name_counter)])
+
+def create_simple_eps(target_file, template, unique_parts):
+    f = open(target_file, 'w')
+    f.write(template)
+    f.write(unique_parts)
+    f.close
+
+def filename(outpath, name, reference_to_idx_of_unnamed):
+    to_fill = outpath+"{}.eps"
+    if name:
+        return to_fill.format(name)
+    else:
+        blank_name= str(reference_to_idx_of_unnamed[0])
+        reference_to_idx_of_unnamed[0]+=1
+        return to_fill.format(blank_name)
 
 if __name__ == '__main__':
     #run directly
