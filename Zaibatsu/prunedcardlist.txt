@@ -1,22 +1,22 @@
-> A/B A/B 3
-> B/C B/C 3
-> A/C A/C 3
-> A A A 3
-> B B B 3
-> C C C 3
-A A > M 6
-A B > M 6
-B C > N 6
-C C > N 6
-B B B > M/N 6
-A A A B B B > U 15
-B B B C C C > V 15
-A M > U 15
-B M > U 15
-B N > V 15
-C N > V 15
-A M U ^ 30
-C N V ^ 30
-V V ^ 30
-U V ^ 30
-U U ^ 30
+> A/B A/B 3 Helios Excavation
+> B/C B/C 3 Rand Biofuel
+> A/C A/C 3 Solstice Farm and Mine
+> A A A 3 Virginia Iron
+> B B B 3 Petrocorp
+> C C C 3 Sunrise Produce
+A A > M 6 Detroit Steel
+A B > M 6 Fujiyama Forges
+B C > N 6 JIT Staffing
+C C > N 6 Worldwide Labor, Inc.
+B B B > M/N 6 Commodity Solutions
+A A A B B B > U 15 Onion Microcontrollers
+B B B C C C > V 15 Hanwei Biological
+A M > U 15 Artra Personal Computing
+B M > U 15 XYZ Mainframes
+B N > V 15 ???
+C N > V 15 ???
+A M U ^ 30 Cityscape Construction
+C N V ^ 30 Excelsior Training
+U U ^ 30 21st Century Defense
+U V ^ 30 Great Wall Datacenters
+V V ^ 30 Influence Street
