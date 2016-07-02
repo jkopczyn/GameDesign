@@ -13,8 +13,8 @@ A A A B B B > U 15 Onion Microcontrollers
 B B B C C C > V 15 Hanwei Biological
 A M > U 15 Artra Personal Computing
 B M > U 15 XYZ Mainframes
-B N > V 15 ???
-C N > V 15 ???
+B N > V 15 The Management Corporation
+C N > V 15 Broadsheet Marketing
 A M U ^ 30 Cityscape Construction
 C N V ^ 30 Excelsior Training
 U U ^ 30 21st Century Defense
