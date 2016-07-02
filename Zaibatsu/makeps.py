@@ -120,4 +120,4 @@ if __name__ == '__main__':
     outpath     = "./cardfile/"
     templatedir = "./eps_partials/"
     inpath      = "cardlist.txt"
-    main(outpath, inpath, templatedir)
+    main(outpath, inpath, templatedir, zones=True)
