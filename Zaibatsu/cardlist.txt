@@ -9,21 +9,21 @@
 > B/C B/C 3 CornCo
 > A A A 3 Virginia Iron
 > A A A 3 MiddleCo Rare Earth
-> A A A 3 
-> A A A 3
+> A A A 3 Canyonside Copper
+> A A A 3 Meteor Deeps Mining
 > B B B 3 Araco Oil
 > B B B 3 Dakota Gas
 > B B B 3 Edmonton Extraction
 > B B B 3 Petrocorp
 > C C C 3 Sunrise Produce
-> C C C 3
-> C C C 3
-> C C C 3
+> C C C 3 Veget Wholesale
+> C C C 3 Gyges Homegrown
+> C C C 3 Farms United
 A A > M 6 Detroit Steel
-A A > M 6
-A A > M 6
+A A > M 6 Gurov Metals
+A A > M 6 Ares Wire
 A B > M 6 Fujiyama Forges
-A B > M 6 
+A B > M 6 Moltek Refining
 B C > N 6 JIT Staffing
 B C > N 6 Nearshore Sourcing
 C C > N 6 Worldwide Labor, Inc
