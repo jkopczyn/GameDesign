@@ -1,3 +1,1 @@
-pruned jkop$ mogrify -format jpg -density 300 *.eps -resize 825x1125
-(in theory -path ./ConvertedFiles but that hasn't worked)
-pruned jkop$ mv *.jpg ConvertedFiles/`
+mogrify -format jpg -density 300 -resize 825x1125 -path ./ConvertedFiles *.eps
