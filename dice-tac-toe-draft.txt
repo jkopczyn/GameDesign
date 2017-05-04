@@ -1,0 +1,20 @@
+Resolution mechanic: Each player has three dice, each a different color.
+ (Probably d6s.) At the end of the game, they will roll them all, and then in
+ ascending order by value resolve their abilities. Many abilities will contest
+ things with another die; higher value wins contests. Probably this roll-off will
+ be done three times.
+
+Important: no decisions occur during the roll-off. Powers are resolved
+ automatically.
+
+Drafting mechanic: Deal out a 3x3 grid of powers, face up. Take turns selecting
+ one. If you have selected a line of three, TTT-style, pick one more, then clear
+ the board and deal a new grid.
+
+could just have an intermediate step where you place the things you've acquired
+ into the slots on the dice, but that would be a slog
+could require that everything be placed as it's acquired, but that seems unfun.
+ If you draft several more cards than slots, and can always overwrite, that
+ would be fun, probably.
+ Maybe make the TTT bonus let you replace ones you'd bumped, or let you shuffle
+ things (probably up to three things) around?
