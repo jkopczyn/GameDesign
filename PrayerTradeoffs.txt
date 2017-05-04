@@ -9,4 +9,4 @@ Swarm: You can move another set of ships every time you move ships; if you have 
 
 Tank: Your ships all have a free +1 HP and +1 armor, but take -1 movement distance.
 
-Outriderss: Your ships all get +2 movement distance, but you may move one less ship per movement activation.
+Outriders: Your ships all get +2 movement distance, but you may move one less ship per movement activation.
