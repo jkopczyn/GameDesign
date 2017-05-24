@@ -18,3 +18,6 @@ could require that everything be placed as it's acquired, but that seems unfun.
  would be fun, probably.
  Maybe make the TTT bonus let you replace ones you'd bumped, or let you shuffle
  things (probably up to three things) around?
+
+
+ to make the draft shorter: powers mostly affect *two* slots, except powerful ones
