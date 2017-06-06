@@ -1,23 +1,61 @@
 Resolution mechanic: Each player has three dice, each a different color.
- (Probably d6s.) At the end of the game, they will roll them all, and then in
- ascending order by value resolve their abilities. Many abilities will contest
- things with another die; higher value wins contests. Probably this roll-off will
- be done three times.
+    (Probably d6s.) At the end of the game, they will roll them all, and then in
+    ascending order by value resolve their abilities. Many abilities will
+    contest things with another die; higher value wins contests. Probably this
+    roll-off will be done three times.
 
 Important: no decisions occur during the roll-off. Powers are resolved
- automatically.
+    automatically.
 
 Drafting mechanic: Deal out a 3x3 grid of powers, face up. Take turns selecting
- one. If you have selected a line of three, TTT-style, pick one more, then clear
- the board and deal a new grid.
+    one. If you have selected a line of three, TTT-style, pick one more, then
+    clear the board and deal a new grid.
 
 could just have an intermediate step where you place the things you've acquired
- into the slots on the dice, but that would be a slog
+    into the slots on the dice, but that would be a slog
 could require that everything be placed as it's acquired, but that seems unfun.
  If you draft several more cards than slots, and can always overwrite, that
- would be fun, probably.
+    would be fun, probably.
  Maybe make the TTT bonus let you replace ones you'd bumped, or let you shuffle
- things (probably up to three things) around?
+    things (probably up to three things) around?
 
 
  to make the draft shorter: powers mostly affect *two* slots, except powerful ones
+
+ resolution: line up the dice from lowest to highest (left to right). Resolve
+    abilities from left to right. Then compare values; the contests are worth
+    4, 7, and 10 points, respectively (high value => higher points).
+
+Dice come in red, green, blue, power boards correspond to color. Possible: power
+    cards also come in colors (use SET?) and there is a minor bonus for matching.
+
+Get a thing, either place it immediately or set it aside. You may set aside one
+    that was previously in the spot you want.
+
+If you pick the third in a line of three, you place it, then may immediately
+    pick one of these two:
+        * pick again and place it
+        * move some around; up to three, including ones previously set aside
+    Then discard the current board and deal another 9.
+
+Power options:
+    * +1 to these two values
+    * +2 to these two values
+    * reroll once if this <= opposing die
+    * +1 points if you roll one of these two values
+    * +2 points if you roll one of these two values
+    * lower die of this pair wins
+    * this pair is worth negative points
+
+    "Rares"
+    * +3 to this one value
+    * +3 points if you roll this value
+    * (jump-the-line power) reroll until you don't get this result
+    * (jump-the-line power) this pair is worth x2 points (x2 * x2 = x3)
+    * (back-of-the-line power) if you lost majority of the round, +5 points
+    * just before rolling begins, you may replace this with one set aside
+
+
+other ideas:
+    * (jump-the-line power) this pair is worth x2 points (x2 * x2 = x3)
+    * +1 to the lower value. When you pick this, you may place a set-aside
