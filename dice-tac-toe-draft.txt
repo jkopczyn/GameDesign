@@ -51,11 +51,13 @@ Power options:
     * +3 to this one value
     * +3 points if you roll this value
     * (jump-the-line power) reroll until you don't get this result
-    * (jump-the-line power) this pair is worth x2 points (x2 * x2 = x3)
+    * this pair is worth x2 points (x2 * x2 = x3)
     * (back-of-the-line power) if you lost majority of the round, +5 points
     * just before rolling begins, you may replace this with one set aside
 
+commons 9x, rares 3x (one per color)
+    initial test deck is 6x, 2x instead, without color
 
 other ideas:
-    * (jump-the-line power) this pair is worth x2 points (x2 * x2 = x3)
+    * (back-of-the-line power) if you won majority of the round, +5 points
     * +1 to the lower value. When you pick this, you may place a set-aside
