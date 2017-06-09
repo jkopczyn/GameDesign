@@ -1,4 +1,6 @@
 Gray reads as blacker, lighten or convert to crosshatch pattern.
+   http://www.tailrecursive.org/postscript/clipping.html
+    ^ on making patterned fills and such, by clipping the pattern to the path
 
 Intuition that only a line you added to this turn counts.
 
