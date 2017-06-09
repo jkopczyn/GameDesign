@@ -59,8 +59,8 @@ grestore
 } def
 
 /height 1050 def
-/width 750 def
-/offset 300 def
+/width height def
+/third height 3 div def
 /halfline 20 def
 /xcontrolpoint 300 def
 /ycontrolpoint 300 def
@@ -75,16 +75,16 @@ gsave
 orientation orient
 %%small curve to the left
 newpath
-width 2 div 0 moveto
-width 2 div halfline sub    0 lineto
-width 2 div halfline sub    ycontrolpoint halfline sub
-	xcontrolpoint halfline sub    offset halfline sub
-		0    offset halfline sub
+third 0 moveto
+third halfline sub    0 lineto
+third halfline sub    ycontrolpoint halfline sub
+	xcontrolpoint halfline sub    third halfline sub
+		0    third halfline sub
 		curveto
-0    offset halfline add lineto
-xcontrolpoint halfline add   offset halfline add
-	width 2 div halfline add    ycontrolpoint halfline add
-		width 2 div halfline add    0
+0    third halfline add lineto
+xcontrolpoint halfline add   third halfline add
+	third halfline add    ycontrolpoint halfline add
+		third halfline add    0
 		curveto
 closepath
 color colors
@@ -99,16 +99,16 @@ gsave
 orientation orient
 %tall curve to the left
 newpath
-width 2 div    0 moveto
-width 2 div halfline sub    0 lineto
-width 2 div halfline sub    ycontrolpoint 2 mul halfline sub
-	xcontrolpoint halfline sub    height offset sub halfline sub
-		0    height offset sub halfline sub
+third    0 moveto
+third halfline sub    0 lineto
+third halfline sub    ycontrolpoint 2 mul halfline sub
+	xcontrolpoint halfline sub    height third sub halfline sub
+		0    height third sub halfline sub
 		curveto
-0    height offset sub halfline add lineto
-xcontrolpoint halfline add    height offset sub halfline add
-	width 2 div halfline add    ycontrolpoint 2 mul halfline add
-		width 2 div halfline add    0
+0    height third sub halfline add lineto
+xcontrolpoint halfline add    height third sub halfline add
+	third halfline add    ycontrolpoint 2 mul halfline add
+		third halfline add    0
 		curveto
 closepath
 color colors
@@ -123,16 +123,16 @@ gsave
 orientation orient
 %diagonal from UR to BL
 newpath
-width    height offset sub moveto
-width    height offset sub halfline add lineto
-width xcontrolpoint 0.9 mul sub    height offset sub halfline add
-	xcontrolpoint 0.9 mul    offset halfline add
-		0    offset halfline add
+width    height third sub moveto
+width    height third sub halfline add lineto
+width xcontrolpoint 0.9 mul sub    height third sub halfline add
+	xcontrolpoint 0.9 mul    third halfline add
+		0    third halfline add
 		curveto
-0    offset halfline sub lineto
-xcontrolpoint 0.9 mul    offset halfline sub
-	width xcontrolpoint 0.9 mul sub    height offset sub halfline sub
-		width    height offset sub halfline sub
+0    third halfline sub lineto
+xcontrolpoint 0.9 mul    third halfline sub
+	width xcontrolpoint 0.9 mul sub    height third sub halfline sub
+		width    height third sub halfline sub
 		curveto
 
 closepath
@@ -148,16 +148,16 @@ gsave
 orientation orient
 %left-side curve
 newpath
-0    height offset sub moveto
-0    height offset sub halfline add lineto
-xcontrolpoint 1.2 mul halfline add   height offset sub halfline add
-	xcontrolpoint 1.2 mul  halfline add    offset halfline sub
-		0    offset halfline sub
+0    height third sub moveto
+0    height third sub halfline add lineto
+xcontrolpoint 1.2 mul halfline add   height third sub halfline add
+	xcontrolpoint 1.2 mul  halfline add    third halfline sub
+		0    third halfline sub
 		curveto
-0    offset halfline add lineto
-xcontrolpoint  1.2 mul halfline sub    offset halfline add
-	xcontrolpoint 1.2 mul  halfline sub    height offset sub halfline sub
-		0    height offset sub halfline sub
+0    third halfline add lineto
+xcontrolpoint  1.2 mul halfline sub    third halfline add
+	xcontrolpoint 1.2 mul  halfline sub    height third sub halfline sub
+		0    height third sub halfline sub
 		curveto
 
 closepath
@@ -173,10 +173,10 @@ gsave
 orientation orient
 %low horizontal line
 newpath
-width    offset halfline add moveto
-0    offset halfline add lineto
-0    offset halfline sub lineto
-width offset halfline sub lineto
+width    third halfline add moveto
+0    third halfline add lineto
+0    third halfline sub lineto
+width third halfline sub lineto
 closepath
 color colors
 grestore
@@ -189,11 +189,11 @@ gsave
 orientation orient
 %straight down the middle
 newpath
-width 2 div    height moveto
-width 2 div halfline add    height lineto
-width 2 div halfline add    0 lineto
-width 2 div halfline sub    0 lineto
-width 2 div halfline sub    height lineto
+third    height moveto
+third halfline add    height lineto
+third halfline add    0 lineto
+third halfline sub    0 lineto
+third halfline sub    height lineto
 closepath
 color colors
 grestore
@@ -203,11 +203,11 @@ gsave
 0 orient
 %straight down the middle
 newpath
-width 2 div    height moveto
-width 2 div halfline add    height lineto
-width 2 div halfline add    0 lineto
-width 2 div halfline sub    0 lineto
-width 2 div halfline sub    height lineto
+third    height moveto
+third halfline add    height lineto
+third halfline add    0 lineto
+third halfline sub    0 lineto
+third halfline sub    height lineto
 closepath
 0 colors
 grestore
@@ -216,4 +216,5 @@ grestore
 0 0 smallcurve 
 3 1 tallcurve
 1 2 diag
-
+0 1 horizline
+1 0 semicirc
