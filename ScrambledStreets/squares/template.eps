@@ -15,10 +15,10 @@ stroke
 gsave
 newpath
 1 0 0 setrgbcolor
-38 38 moveto
-38 1087 lineto
+37.5 37.5 moveto
+37.5 1087 lineto
 1087 1087 lineto
-1087 38 lineto
+1087 37.5 lineto
 closepath
 stroke
 grestore
@@ -34,6 +34,24 @@ closepath
 stroke
 grestore
 
+/height 1050 def
+/width height def
+/third height 3 div def
+/halfline 20 def
+/xcontrolpoint 300 def
+/ycontrolpoint 300 def
+/lnw 4 def
+
+/origintocenter height 2 div def
+
+/orient {
+	/n exch def
+    origintocenter origintocenter translate
+    n 90 mul rotate
+    -1 origintocenter mul -1 origintocenter mul translate
+} def
+
+
 /black {0 setgray fill} def
 
 /white {gsave 1 setgray fill grestore lnw setlinewidth stroke} def
@@ -45,28 +63,11 @@ grestore
 	param 0 eq {black} if
 	param 1 eq {gray} if
 	param 2 eq {white} if
-	%stroke not necessary
+	%stroke handled in color's code to account for black/color differences
 } def
 
-/horizflip {width 0 translate -1 1 scale} def
 
-/vertflip {0 height translate 1 -1 scale} def
-
-/orient {
-	/n exch def
-	n 1 eq n 2 eq or {vertflip} if
-	n 2 eq n 3 eq or {horizflip} if
-} def
-
-/height 1050 def
-/width height def
-/third height 3 div def
-/halfline 20 def
-/xcontrolpoint 300 def
-/ycontrolpoint 300 def
-/lnw 4 def
-
-38 38 translate
+37.5 37.5 translate
 
 /smallcurve {
 /color exch def
@@ -198,19 +199,6 @@ closepath
 color colors
 grestore
 } def
-
-gsave
-0 orient
-%straight down the middle
-newpath
-third    height moveto
-third halfline add    height lineto
-third halfline add    0 lineto
-third halfline sub    0 lineto
-third halfline sub    height lineto
-closepath
-0 colors
-grestore
 
 2 0 vertline
 0 0 smallcurve 
