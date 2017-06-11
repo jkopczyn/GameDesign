@@ -52,10 +52,11 @@ grestore
 } def
 
 
+/horizflip {width 0 translate -1 1 scale} def
+
+
 /black {0 setgray fill} def
-
 /white {gsave 1 setgray fill grestore lnw setlinewidth stroke} def
-
 /gray {gsave 0.65 setgray fill grestore lnw setlinewidth stroke} def
 
 /colors {
@@ -63,7 +64,8 @@ grestore
 	param 0 eq {black} if
 	param 1 eq {gray} if
 	param 2 eq {white} if
-	%stroke handled in color's code to account for black/color differences
+	%stroke and fill handled in color's code to account for display differences
+    %   this is compatible with an unusual crosshatch pattern done once
 } def
 
 
@@ -91,6 +93,8 @@ closepath
 color colors
 grestore
 } def
+/type1 {smallcurve} def
+
 
 
 /tallcurve {
@@ -115,7 +119,16 @@ closepath
 color colors
 grestore
 } def
-
+/type2 {tallcurve} def
+/type8 {
+    /color exch def
+    /orientation exch def
+    gsave
+        orientation orient
+        horizflip
+        0 color tallcurve
+    grestore
+} def
 
 /diag {
 /color exch def
@@ -206,3 +219,4 @@ grestore
 1 2 diag
 0 1 horizline
 1 0 semicirc
+3 1 type8
