@@ -47,7 +47,7 @@ grestore
 /orient {
     /n exch def
     origintocenter origintocenter translate
-    n 90 mul rotate
+    n -90 mul rotate
     -1 origintocenter mul -1 origintocenter mul translate
 } def
 
@@ -130,29 +130,43 @@ param 2 eq {white} if
     grestore
 } def
 
+
+
 /diag {
     /color exch def
     /orientation exch def
     gsave
         orientation orient
-        %diagonal from UR to BL
+        %diagonal from position 1 (bottom, left half)
+            % to position 5 (top, right half)
         newpath
-        width    height third sub moveto
-        width    height third sub halfline add lineto
-        width xcontrolpoint 0.9 mul sub    height third sub halfline add
-        xcontrolpoint 0.9 mul    third halfline add
-        0    third halfline add
+        width third sub    height moveto
+        width third sub halfline add    height lineto
+        width third sub halfline add    height xcontrolpoint 0.9 mul sub
+        third halfline add      xcontrolpoint 0.9 mul
+        third halfline add      0
         curveto
-        0    third halfline sub lineto
-        xcontrolpoint 0.9 mul    third halfline sub
-        width xcontrolpoint 0.9 mul sub    height third sub halfline sub
-        width    height third sub halfline sub
+        third halfline sub      0 lineto
+        third halfline sub      xcontrolpoint 0.9 mul
+        width third sub halfline sub    height xcontrolpoint 0.9 mul sub
+        width third sub halfline sub    height
         curveto
 
         closepath
         color colors
     grestore
 } def
+/type4 {diag} def
+/type7 {
+    /color exch def
+    /orientation exch def
+    gsave
+        orientation orient
+        horizflip
+        0 color diag
+    grestore
+} def
+
 
 
 /semicirc {
@@ -178,6 +192,7 @@ param 2 eq {white} if
         color colors
     grestore
 } def
+/type6 {semicirc} def
 
 
 /horizline {
@@ -196,6 +211,7 @@ param 2 eq {white} if
     grestore
 } def
 
+
 /vertline {
     /color exch def
     /orientation exch def
@@ -212,11 +228,14 @@ param 2 eq {white} if
         color colors
     grestore
 } def
+/type3 {vertline} def
 
-2 0 vertline
-0 0 smallcurve 
-3 1 tallcurve
-1 2 diag
-0 1 horizline
-1 0 semicirc
-3 1 type8
+
+
+0 0 type1
+3 1 type2
+1 0 type3
+1 1 type4
+1 0 type6
+0 2 type7
+3 2 type8
