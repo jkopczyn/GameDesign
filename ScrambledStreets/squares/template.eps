@@ -174,18 +174,18 @@ param 2 eq {white} if
     /orientation exch def
     gsave
         orientation orient
-        %left-side curve
+        %curve between two bottom points
         newpath
-        0    height third sub moveto
-        0    height third sub halfline add lineto
-        xcontrolpoint 1.2 mul halfline add   height third sub halfline add
-        xcontrolpoint 1.2 mul  halfline add    third halfline sub
-        0    third halfline sub
+        width third sub   0 moveto
+        width third sub halfline add   0 lineto
+        width third sub halfline add   xcontrolpoint 1.2 mul halfline add
+        third halfline sub      xcontrolpoint 1.2 mul halfline add
+        third halfline sub      0
         curveto
-        0    third halfline add lineto
-        xcontrolpoint  1.2 mul halfline sub    third halfline add
-        xcontrolpoint 1.2 mul  halfline sub    height third sub halfline sub
-        0    height third sub halfline sub
+        third halfline add      0 lineto
+        third halfline add      xcontrolpoint  1.2 mul halfline sub
+        height third sub halfline sub      xcontrolpoint  1.2 mul halfline sub
+        height third sub halfline sub   0
         curveto
 
         closepath
@@ -236,6 +236,6 @@ param 2 eq {white} if
 3 1 type2
 1 0 type3
 1 1 type4
-1 0 type6
+2 0 type6
 0 2 type7
 3 2 type8
