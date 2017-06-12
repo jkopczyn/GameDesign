@@ -230,6 +230,28 @@ param 2 eq {white} if
 } def
 /type3 {vertline} def
 
+/broadcurve {
+    /color exch def
+    /orientation exch def
+    gsave
+        orientation orient
+        newpath
+        third 0 moveto
+        third halfline sub      0 lineto
+        third halfline sub      height ycontrolpoint sub halfline sub
+        width xcontrolpoint sub halfline sub    height third sub halfline sub
+        width   height third sub halfline sub
+        curveto
+        width   height third sub halfline add lineto
+        width xcontrolpoint sub halfline add    height third sub halfline add
+        third halfline add      height ycontrolpoint sub halfline add
+        third halfline add      0
+        curveto
+        closepath
+        color colors
+    grestore
+} def
+/type5 {broadcurve} def
 
 
 0 0 type1
@@ -239,3 +261,4 @@ param 2 eq {white} if
 2 0 type6
 0 2 type7
 3 2 type8
+0 0 type5
