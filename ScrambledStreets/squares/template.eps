@@ -238,13 +238,13 @@ param 2 eq {white} if
         newpath
         third 0 moveto
         third halfline sub      0 lineto
-        third halfline sub      height ycontrolpoint sub halfline sub
-        width xcontrolpoint sub halfline sub    height third sub halfline sub
-        width   height third sub halfline sub
+        third halfline sub      height ycontrolpoint sub halfline add
+        width xcontrolpoint sub halfline sub    height third sub halfline add
+        width   height third sub halfline add
         curveto
-        width   height third sub halfline add lineto
-        width xcontrolpoint sub halfline add    height third sub halfline add
-        third halfline add      height ycontrolpoint sub halfline add
+        width   height third sub halfline sub lineto
+        width xcontrolpoint sub halfline add    height third sub halfline sub
+        third halfline add      height ycontrolpoint sub halfline sub
         third halfline add      0
         curveto
         closepath
