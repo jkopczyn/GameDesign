@@ -16,36 +16,36 @@ def process(spec):
 	symbols = spec.split()
 	while symbols:
 		#format: shape orientation color
-		accum += "gsave "
 		color = symbols.pop()
 		position = symbols.pop()
 		shape = symbols.pop()
-		accum+= orientlookup(position)
-		accum+= colorlookup(color)
-		accum+= shapelookup(shape)
-		accum+="grestore \n"
+		accum += " ".join([
+                    "gsave",
+                    orientlookup(position),
+                    colorlookup(color),
+                    shapelookup(shape),
+                    "grestore",
+                    "\n"])
 	return accum
-	#now do something with those symbols.
-	#for what to do, punt to lookup()
 
 def shapelookup(char):
     if char in [str(n) for n in range(8)]:
-        return "type"+char+" "
+        return "type"+char
     return 'you broke it you fucker (shape)'
 
 def orientlookup(char):
     if char in {'0','1','2','3'}:
-        return char+" "
+        return char
     return 'you broke it you fucker (orientation)'
 
 def colorlookup(char):
     #color: B, W, G, for black, white, gray
     if 'B'==char:
-        return "0 "
+        return "0"
     if 'G'==char:
-        return "1 "
+        return "1"
     if 'W'==char:
-        return "2 "
+        return "2"
     return 'you broke it you fucker (color)'
 
 #format: shape orientation color
