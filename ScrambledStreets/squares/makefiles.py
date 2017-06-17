@@ -1,14 +1,10 @@
 #!/usr/bin/python
-import shutil
+import sys
 import os
 
-outpath = "./cardfile/"
-basepath = "template.eps"
-inpath = "cardlist.txt"
-base = open(basepath) #the template
-template = base.read()
-base.close() #there is nothing more to see
-cardlist = open(inpath)
+OUTPATH = "./cardfile/"
+BASEPATH = "template.eps"
+INPATH = "cardlist.txt"
 
 #take a line and break it down into individual symbols
 def process(spec):
@@ -40,35 +36,34 @@ def orientlookup(char):
 
 def colorlookup(char):
     #color: B, W, G, for black, white, gray
-    if 'B'==char:
-        return "0"
-    if 'G'==char:
-        return "1"
-    if 'W'==char:
-        return "2"
-    return 'you broke it you fucker (color)'
+    return {'B': '0', 'G': '1', 'W': '2'}.get(
+            char, 'you broke it you fucker (color)')
 
-#format: shape orientation color
-#	type: V for short curve: smallcurve, L for big curve: tallcurve, C for both on a side: semicirc
-#S for distinct sides: diag, I for vertical: vertline, _ for horizontal: horizline
-#	orientation: 0 is BL, 1 is TL, 2 is TR, 3 is BR
-#for things that are left-right symmetric, 0=3, 1=2
-#for things that are top-bottom symmetric, 0=1, 2=3
-#if it's on a short edge, that's the one that goes on the B/T
-#	color: B, W, G, for black, white, gray
-#
 
-i=1
+def main(inpath=None):
+    if not inpath:
+        inpath = INPATH
+    base = open(BASEPATH)
+    template = base.read()
+    base.close()
+    cardlist = open(inpath)
+    i=1
+    while(True):
+        card = cardlist.readline()
+        if card == "" :
+            cardlist.close()
+            break
+        cardprint = open(OUTPATH+str(i)+'.eps','w+')
+        cardprint.write(template) #copy the template into the file
 
-while(True):
-    card = cardlist.readline() #get the next card description
-    if card == "" : #if it's empty, close the file and exit loop
-        cardlist.close()
-        break
-    psout = process(card); #turn that description into PS
-    cardprint = open(outpath+str(i)+'.eps','w+') #the file for the card
-    cardprint.write(template) #copy the template into the file
-    cardprint.write(psout) #create the specific card PS
-    cardprint.close() #and it's done
-    i+=1 #so that each file is different
+        psout = process(card);
+        cardprint.write(psout) #create the card-specific PS
+        cardprint.close()
+        i+=1
 
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        main(sys.argv[1])
+    else:
+        main()
