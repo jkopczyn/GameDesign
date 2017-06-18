@@ -93,7 +93,7 @@ param 2 eq {white} if
         color colors
     grestore
 } def
-/type1 {smallcurve} def
+/type0 {smallcurve} def
 
 
 
@@ -119,8 +119,9 @@ param 2 eq {white} if
         color colors
     grestore
 } def
-/type2 {tallcurve} def
-/type8 {
+/type1 {tallcurve} def
+
+/type7 {
     /color exch def
     /orientation exch def
     gsave
@@ -156,8 +157,9 @@ param 2 eq {white} if
         color colors
     grestore
 } def
-/type4 {diag} def
-/type7 {
+/type3 {diag} def
+
+/type6 {
     /color exch def
     /orientation exch def
     gsave
@@ -192,7 +194,7 @@ param 2 eq {white} if
         color colors
     grestore
 } def
-/type6 {semicirc} def
+/type5 {semicirc} def
 
 
 /horizline {
@@ -228,7 +230,7 @@ param 2 eq {white} if
         color colors
     grestore
 } def
-/type3 {vertline} def
+/type2 {vertline} def
 
 /broadcurve {
     /color exch def
@@ -251,7 +253,7 @@ param 2 eq {white} if
         color colors
     grestore
 } def
-/type5 {broadcurve} def
+/type4 {broadcurve} def
 
 %0 0 type1
 %3 1 type2
@@ -262,6 +264,6 @@ param 2 eq {white} if
 %0 2 type7
 %3 2 type8
 
-gsave 2 you broke it you fucker (color) type1 grestore 
-gsave you broke it you fucker (orientation) you broke it you fucker (color) type1 grestore 
-gsave 1 you broke it you fucker (color) type0 grestore 
+gsave 1 0 type5 grestore 
+gsave 2 2 type2 grestore 
+gsave 0 1 type3 grestore 
