@@ -1,12 +1,12 @@
 planning what's needed for the square deck
 
-      6   5
+      5   4
      --- ---
-  7 |   |   | 4
+  6 |   |   | 3
      --- ---
-  8 |   |   | 3
+  7 |   |   | 2
      --- ---
-      1   2
+      0   1
 
 Distinct curves, up to rotation:
 1-2 aka semicirc
@@ -18,30 +18,30 @@ Distinct curves, up to rotation:
 2-4 aka tallcurve (flipped)
 2-6 aka diag (flipped)
 
-      3   4
+      2   3
      --- ---
-  2 |   |   | 5
+  1 |   |   | 4
      --- ---
-  1 |   |   | -
+  0 |   |   | -
      --- ---
-      x   6
+      x   5
 
 Distinct curves, up to rotation:
-type 1 aka smallcurve
-type 2 aka tallcurve
-type 3 aka vertline
-type 4 aka diag
-type 5 needed
-type 6 aka semicirc
+type 0 aka smallcurve
+type 1 aka tallcurve
+type 2 aka vertline
+type 3 aka diag
+type 4 needed
+type 5 aka semicirc
 
-      7   -
+      6   -
      --- ---
-  - |   |   | 8
+  - |   |   | 7
      --- ---
   - |   |   | -
      --- ---
       -   y
 
 Distinct curves, up to rotation:
-type 7 aka diag (flipped)
-type 8 aka tallcurve (flipped)
+type 6 aka diag (flipped)
+type 7 aka tallcurve (flipped)

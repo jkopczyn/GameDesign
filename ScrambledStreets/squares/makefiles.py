@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import sys
 import os
+from string import digits as DIGITS
 
 OUTPATH = "./cardfile/"
 BASEPATH = "template.eps"
@@ -27,17 +28,17 @@ def process(spec):
 def shapelookup(char):
     if char in [str(n) for n in range(8)]:
         return "type"+char
-    return 'you broke it you fucker (shape)'
+    return '(broken-shape)'
 
 def orientlookup(char):
-    if char in {'0','1','2','3'}:
-        return char
-    return 'you broke it you fucker (orientation)'
+    if char in DIGITS:
+        return str(int(char)%4)
+    return '(broken-orientation)'
 
 def colorlookup(char):
     #color: B, W, G, for black, white, gray
-    return {'B': '0', 'G': '1', 'W': '2'}.get(
-            char, 'you broke it you fucker (color)')
+    return {'B': '0', 'G': '1', 'W': '2', '0': '0', '1': '1', '2': '2'}.get(
+            char, '(broken-color)')
 
 
 def main(inpath=None):
@@ -53,7 +54,7 @@ def main(inpath=None):
         if card == "" :
             cardlist.close()
             break
-        cardprint = open(OUTPATH+str(i).rjust(5,'0')+'.eps','w+')
+        cardprint = open(OUTPATH+str(i).rjust(5,'0')+'.eps','w')
         cardprint.write(template) #copy the template into the file
 
         psout = process(card);
