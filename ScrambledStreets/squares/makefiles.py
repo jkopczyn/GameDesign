@@ -53,7 +53,7 @@ def main(inpath=None):
         if card == "" :
             cardlist.close()
             break
-        cardprint = open(OUTPATH+str(i)+'.eps','w+')
+        cardprint = open(OUTPATH+str(i).rjust(5,'0')+'.eps','w+')
         cardprint.write(template) #copy the template into the file
 
         psout = process(card);
