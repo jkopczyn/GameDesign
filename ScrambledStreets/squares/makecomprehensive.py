@@ -17,13 +17,13 @@ def edges_to_type_and_rotation(low,high):
     else:
         rotation, edgetype = {
                 0: {2: [3, 1], 4: [0, 3], 6: [0, 1]},
-                1: {7: [3, 7], 5: [0, 6], 3: [0, 7]},
+                1: {7: [1, 7], 5: [0, 6], 3: [0, 7]},
                 2: {0: [3, 1], 4: [2, 1], 6: [1, 3]},
                 3: {7: [1, 6], 5: [3, 7], 1: [0, 7]},
                 4: {2: [2, 1], 0: [0, 3], 6: [1, 1]},
                 5: {7: [2, 7], 1: [0, 6], 3: [3, 7]},
                 6: {2: [1, 3], 4: [1, 1], 0: [0, 1]},
-                7: {1: [3, 7], 5: [2, 7], 3: [1, 6]}}[low][high]
+                7: {1: [1, 7], 5: [2, 7], 3: [1, 6]}}[low][high]
     return map(str,[edgetype, rotation])
 
 
@@ -90,20 +90,29 @@ def filter_wanted_check(list_of_pairs, remove_duplicates, queer):
 def all_possible_shape_combinations():
     return all_desired_shape_combinations(False, False)
 
-def all_desired_shape_combinations(remove_duplicates=True, queer=False):
+def all_desired_shape_combinations(remove_duplicates=True, queer=False, debug=False):
+    if debug:
+        color_picks = [(0,0,0)]
+    else:
+        color_picks = permutations(COLOR_ENCODING)
     point_orderings = permutations(range(8), 6)
     pairs_orderings = filter(very_sorted, imap(pair_up_list,point_orderings))
     desired_orderings = filter_wanted_check(pairs_orderings, remove_duplicates,
             queer)
+    #for i, o in enumerate(desired_orderings):
+    #    if i in set([99, 100, 108, 83, 84, 57, 58, 59, 61]):
+    #        print "Fails: "+str(o)+str(i*6+1)
+    #    elif i in set([98, 99, 100, 101, 107, 109, 82, 83, 84, 85, 56, 57, 58, 59, 60, 62]):
+    #        print "Succeeds: "+str(o)+str(i*6+1)
     return [make_line(pairs, colors) for pairs in desired_orderings for
-            colors in permutations(COLOR_ENCODING)]
+            colors in color_picks]
 
 
 FILEPATH = "cardlist.txt"
 
 def main():
     lines = open(FILEPATH, "w")
-    for line in all_desired_shape_combinations():
+    for line in all_desired_shape_combinations(debug=True):
         lines.write(line)
     lines.close()
 
