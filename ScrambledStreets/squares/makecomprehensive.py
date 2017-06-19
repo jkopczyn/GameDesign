@@ -48,17 +48,41 @@ def pair_up_list(l):
 def very_sorted(lol):
     return sorted(lol) == list(lol) and all(sorted(l) == list(l) for l in lol)
 
-def no_lower_doppelgangers(pairs):
-    for pair in pairs:
-        for i in range(1,pair[0]/2+1):
-            if (pair[0]-2*i, pair[1]-2*i) not in pairs:
-                return False
-    return True
+class RotationRememberer(object):
+    def __init__(self):
+        self.seen = {}
+
+    def make_seen(self, pairs):
+        first_key = (pairs[0][0],pairs[0][1])
+        second_key = (pairs[1][0],pairs[1][1])
+        third_key = (pairs[2][0],pairs[2][1])
+        if not first_key in self.seen:
+            self.seen[first_key] = {}
+        if not second_key in self.seen[first_key]:
+            self.seen[first_key][second_key] = {}
+        self.seen[first_key][second_key][third_key] = True
+        return True
+
+    def check_seen(self, pairs):
+        unrotate = lambda p, r: ((p[0]-2*r)%8, (p[1]-2*r)%8)
+        isomers = [sorted(map(lambda p: tuple(sorted(unrotate(p, i))), pairs)) for i in range(4)]
+        for isomer in isomers:
+            if self.seen.get(isomer[0]) and \
+            self.seen[isomer[0]].get(isomer[1]) and \
+            self.seen[isomer[0]][isomer[1]].get(isomer[2]):
+                return True
+        return False
+
+    def reject_or_make_seen(self, pairs):
+        if self.check_seen(pairs):
+            return False
+        return self.make_seen(pairs)
 
 def filter_wanted_check(list_of_pairs, remove_duplicates, queer):
     output = list_of_pairs
     if remove_duplicates:
-        output = filter(no_lower_doppelgangers, output)
+        memory = RotationRememberer()
+        output = filter(memory.reject_or_make_seen, output)
     if queer:
         pass #later this will remove straight lines
     return output
