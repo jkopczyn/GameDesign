@@ -48,10 +48,30 @@ def pair_up_list(l):
 def very_sorted(lol):
     return sorted(lol) == list(lol) and all(sorted(l) == list(l) for l in lol)
 
+def no_lower_doppelgangers(pairs):
+    for pair in pairs:
+        for i in range(1,pair[0]/2+1):
+            if (pair[0]-2*i, pair[1]-2*i) not in pairs:
+                return False
+    return True
+
+def filter_wanted_check(list_of_pairs, remove_duplicates, queer):
+    output = list_of_pairs
+    if remove_duplicates:
+        output = filter(no_lower_doppelgangers, output)
+    if queer:
+        pass #later this will remove straight lines
+    return output
+
 def all_possible_shape_combinations():
+    return all_desired_shape_combinations(False, False)
+
+def all_desired_shape_combinations(remove_duplicates=True, queer=False):
     point_orderings = permutations(range(8), 6)
     pairs_orderings = filter(very_sorted, imap(pair_up_list,point_orderings))
-    return [make_line(pairs, colors) for pairs in pairs_orderings for
+    desired_orderings = filter_wanted_check(pairs_orderings, remove_duplicates,
+            queer)
+    return [make_line(pairs, colors) for pairs in desired_orderings for
             colors in permutations(COLOR_ENCODING)]
 
 
@@ -59,7 +79,7 @@ FILEPATH = "cardlist.txt"
 
 def main():
     lines = open(FILEPATH, "w")
-    for line in all_possible_shape_combinations():
+    for line in all_desired_shape_combinations():
         lines.write(line)
     lines.close()
 
