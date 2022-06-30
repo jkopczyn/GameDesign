@@ -1,4 +1,7 @@
 #!python2
+
+# Create a cardlist file based on constraints specified
+
 from itertools import permutations
 from itertools import izip
 from itertools import imap
@@ -151,11 +154,46 @@ def all_desired_shape_combinations(remove_duplicates=True, queer=False, disorder
 
 FILEPATH = "cardlist.txt"
 
-def main():
-    lines = open(FILEPATH, "w")
-    for line in all_desired_shape_combinations(debug=True, queer=True, disorderly=True):
+def main(outpath=None, bitmap=7):
+    debug, queer, disorderly = (bool(x) for x in (bitmap&4, bitmap&2, bitmap&1))
+    if not outpath:
+        outpath = FILEPATH
+    lines = open(outpath, "w")
+    for line in all_desired_shape_combinations(debug=debug, queer=queer, disorderly=disorderly):
         lines.write(line)
     lines.close()
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) == 3:
+        n, s = sorted(sys.argv[1:], key=lambda x: len(x))
+        try:
+            n = int(n)
+            if n > 7 or n < 0:
+                print("Bad args, should be int 0-7 and/or filename")
+                exit
+        except ValueError:
+            print("Bad args, should be int 0-7 and/or filename")
+            exit
+        main(bitmap=n, outpath=s)
+        if len(sys.argv[1]) > 1:
+            file = sys.argv[1]
+        elif len(sys.argv[2]) > 1:
+            file = sys.argv[2]
+        else:
+            print("Bad args, should be int 0-7 and/or filename")
+            exit
+    elif len(sys.argv) == 2:
+        if len(sys.argv[1]) > 1:
+            main(outpath=sys.argv[1])
+        else:
+            try:
+                bitmap = int(sys.argv[1])
+                if bitmap > 7 or bitmap < 0:
+                    print("Bad args, should be int 0-7 and/or filename")
+                main(bitmap=bitmap)
+            except ValueError:
+                print("Bad args, should be int 0-7 and/or filename")
+    elif len(sys.argv) > 3:
+            print("Bad args, should be int 0-7 and/or filename")
+    else:
+        main()
