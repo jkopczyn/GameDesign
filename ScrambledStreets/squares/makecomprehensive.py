@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!python2
 from itertools import permutations
 from itertools import izip
 from itertools import imap
