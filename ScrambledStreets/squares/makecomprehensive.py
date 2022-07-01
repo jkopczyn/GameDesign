@@ -101,11 +101,11 @@ def crossed_lines_only(pairs):
             (0,3): [tuple(sorted((x,y))) for x in  [1,2] for y in range(4,8)] +
                 [(4,7)],
             (1,4): [tuple(sorted((x,y))) for x in  [2,3] for y in (
-                [0]+range(5,8))] +[(0,5)],
+                [0]+list(range(5,8)))] +[(0,5)],
             (2,5): [tuple(sorted((x,y))) for x in  [3,4] for y in (
-                [0,1]+range(6,8))] +[(1,6)],
+                [0,1]+list(range(6,8)))] +[(1,6)],
             (3,6): [tuple(sorted((x,y))) for x in  [4,5] for y in (
-                range(3)+[7])] +[(2,7)],
+                list(range(3))+[7])] +[(2,7)],
             (4,7): [tuple(sorted((x,y))) for x in  [5,6] for y in range(4)] +
                 [(0,3)],
             (0,5): [tuple(sorted((x,y))) for x in  [6,7] for y in range(1,5)] +
