@@ -1,4 +1,4 @@
-#!python2
+#!/usr/bin/python3
 import sys
 import os
 from string import digits as DIGITS

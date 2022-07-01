@@ -1,10 +1,8 @@
-#!python2
+#!/usr/bin/python3
 
 # Create a cardlist file based on constraints specified
 
 from itertools import permutations
-from itertools import izip
-from itertools import imap
 from string import digits as DIGITS
 import sys
 import os
@@ -42,11 +40,11 @@ COLOR_ENCODING = [0,1,2]
 
 def make_line(pairs, colors):
     pairwise_typing = lambda x: edges_to_type_and_rotation(*x)
-    charblobs = imap(str,izip(imap(pairwise_typing, pairs),colors))
+    charblobs = map(str,zip(map(pairwise_typing, pairs),colors))
     return ' '.join(c for c in ''.join(charblobs) if c in DIGITS)+'\n'
 
 def pair_up_list(l):
-    return list(izip(*[iter(l)]*2))
+    return list(zip(*[iter(l)]*2))
 
 def very_sorted(lol):
     return sorted(lol) == list(lol) and all(sorted(l) == list(l) for l in lol)
@@ -145,7 +143,7 @@ def all_desired_shape_combinations(remove_duplicates=True, queer=False, disorder
     else:
         color_picks = permutations(COLOR_ENCODING)
     point_orderings = permutations(range(8), 6)
-    pairs_orderings = filter(very_sorted, imap(pair_up_list,point_orderings))
+    pairs_orderings = filter(very_sorted, map(pair_up_list,point_orderings))
     desired_orderings = filter_wanted_check(pairs_orderings, remove_duplicates,
             queer, disorderly)
     return [make_line(pairs, colors) for pairs in desired_orderings for
@@ -162,6 +160,7 @@ def main(outpath=None, bitmap=7):
     for line in all_desired_shape_combinations(debug=debug, queer=queer, disorderly=disorderly):
         lines.write(line)
     lines.close()
+
 
 if __name__ == "__main__":
     if len(sys.argv) == 3:
