@@ -1,0 +1,48 @@
+existing deck
+x3  > A/B A/B 3
+x3  > A/C A/C 3
+x3  > B/C B/C 3
+x4  > A A A 3
+x4  > B B B 3
+x4  > C C C 3
+
+x3  A A > M 6
+x2  A B > M 6
+x2  B C > N 6
+x3  C C > N 6
+x2  B B B > M/N 6
+
+x1  A A A B B B > U 15
+x1  B B B C C C > V 15
+x2  A M > U 15
+x2  B M > U 15
+x2  B N > V 15
+x2  C N > V 15
+
+x1  A M U ^ 30
+x1  C N V ^ 30
+x1  U U ^ 30
+x1  U V ^ 30
+x1  V V ^ 30
+
+produce
+A   18
+B   18
+C   18
+
+M   6
+N   6
+
+U   5
+V   5
+
+consume
+A   14
+B   20
+C   14
+
+M   5
+N   5
+
+U   4
+V   4
