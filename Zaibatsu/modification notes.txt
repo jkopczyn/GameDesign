@@ -1,0 +1,96 @@
+existing deck (guess)
+
+->AAA       x?4?
+->BBB       x?3?
+->CCC       x?4?
+->A/B A/B   x?3?
+->B/C B/C   x?3?
+x?17?
+
+AA->M   x?3?
+AB->M   x?3?
+BBB->M  x?2?
+BBB->N  x?2?
+BC->N   x?3?
+CC->N   x?3?
+x?16?
+
+AAM->U  x?1?
+MM->U   x?2?
+MN->V   x?1?
+MN->V   x?1?
+NN->V   x?2?
+NCC->V  x?1?
+x?8?
+
+UU->    x1
+ABMU->   x1
+ABBM->  x1
+NBBC->  x1
+VNBC->   x1
+VV->    x1
+x6
+
+10%? more supply than demand per tier
+
+total supply
+A,C     15?
+B       15?
+M,N     8?
+U,V     4
+
+
+total demand
+A,C     13?
+B       12?
+M,N     7?
+U,V     3
+
+auction manipulation subdeck
+L = 'lobbying' = 'do another bidding round'
+S = 'secret' = 'write bids, high bid wins'
+
+
+->AA L      x2
+->BB L      x2
+->CC L      x2
+->A A/B S   x1
+->A/B B/C S x1
+->B/C C S   x1
+x8
+->AAAA      x2
+->BBBB      x2
+->CCCC      x2
+->A LS      x1
+->C LS      x1
+
+->LL
+->SS
+
+
+money refund subdeck
+->AA 1      x2
+->BB 1      x2
+->CC 1      x2
+->AAAA      x2
+->BBBB      x2
+->CCCC      x2
+->A/B/C A/B/C   x5
+supply 15 1/3 each
+x17
+
+
+subdecks
+base deck: nothing but commodities, seven types in three tiers, four levels of company
+
+nine decks? three vertical, three horizontal
+maybe easier, six: two vertical, three horizontal
+
+
+vertical levels have to match up to the ~10% surplus at each step balance
+    - tricky to maintain without increasing the number of symbols (more fiddly to assign)
+
+horizontal levels need to respect vertical-level quota, but not internally
+    if two vertical levels (->AAA through ABB->MM, then MMN->U through UU->), flexibility within
+
+card counts need to be stable
